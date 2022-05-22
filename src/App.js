@@ -1,10 +1,16 @@
+import { Routes } from 'react-router-dom';
 import './App.css';
+import Home from './components/Home/Home';
+import Footer from './components/Shared/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <h1 className='text-primary'>we are coming...............</h1>
-      <button class="btn btn-primary">Button</button>
+    <div>
+      <Home></Home>
+      <Routes>
+        
+      </Routes>
+      <Footer></Footer>
     </div>
   );
 }
