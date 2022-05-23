@@ -12,8 +12,8 @@ const CarParts1 = () => {
                     <p className="text-white">MEGA SALE</p>
                     <p className="text-white text-xs">FROM $500</p>
                 </div>
-                <div class="card-actions">
-                    <button class="btn btn-secondary">View Details</button>
+                <div className="card-actions">
+                    <button className="btn btn-secondary">View Details</button>
                 </div>
             </div>
             <div style={{ background: `url(${car2})`, height: '200px' }} className="card shadow-xl">
@@ -22,8 +22,8 @@ const CarParts1 = () => {
                     <p className="text-white">FOR ANY VEHICLE</p>
                     <p className="text-white text-xs">COUPE, SEDAN, SUV</p>
                 </div>
-                <div class="card-actions">
-                    <button class="btn btn-secondary">View Details</button>
+                <div className="card-actions">
+                    <button className="btn btn-secondary">View Details</button>
                 </div>
             </div>
             <div style={{ background: `url(${car3})`, height: '200px' }} className="card shadow-xl">
@@ -32,8 +32,8 @@ const CarParts1 = () => {
                     <p className="text-white">SYSTEM</p>
                     <p className="text-white text-xs">PRICES REDUCTION</p>
                 </div>
-                <div class="card-actions">
-                    <button class="btn btn-secondary">View Details</button>
+                <div className="card-actions">
+                    <button className="btn btn-secondary">View Details</button>
                 </div>
             </div>
         </div>
