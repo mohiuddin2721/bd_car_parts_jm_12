@@ -3,6 +3,7 @@ import parts1 from '../../images/parts1.webp';
 import parts4 from '../../images/parts4.webp';
 import parts6 from '../../images/parts6.webp';
 import parts9 from '../../images/parts9.webp';
+import { FaFacebook, FaInstagram, FaTwitterSquare, FaYoutubeSquare } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -22,6 +23,12 @@ const Footer = () => {
                                 <li className='text-white'>
                                     <p>Golshan-2, Dhaka</p>
                                 </li>
+                            </ul>
+                            <ul className='mt-4 flex'>
+                                <a href="https://www.facebook.com/"><FaFacebook className='text-white text-3xl pl-2' /></a>
+                                <a href="https://www.instagram.com/"><FaInstagram className='text-white text-3xl pl-2' /></a>
+                                <a href="https://twitter.com/"><FaTwitterSquare className='text-white text-3xl pl-2' /></a>
+                                <a href="https://www.youtube.com/"><FaYoutubeSquare className='text-white text-3xl pl-2' /></a>
                             </ul>
                         </div>
                     </div>
