@@ -4,6 +4,7 @@ import Banner2 from './Banner2';
 import BsSummary from './BsSummary';
 import CarParts1 from './CarParts1';
 import Parts from './Parts';
+import Reviews from './Reviews';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Parts></Parts>
             <BsSummary></BsSummary>
             <Banner2></Banner2>
+            <Reviews></Reviews>
         </div>
     );
 };
