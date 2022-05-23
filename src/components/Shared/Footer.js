@@ -3,7 +3,8 @@ import parts1 from '../../images/parts1.webp';
 import parts4 from '../../images/parts4.webp';
 import parts6 from '../../images/parts6.webp';
 import parts9 from '../../images/parts9.webp';
-import { FaFacebook, FaInstagram, FaTwitterSquare, FaYoutubeSquare } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitterSquare, FaYoutubeSquare, FaCcMastercard, FaCcPaypal, FaCcVisa } from "react-icons/fa";
+import { RiMastercardLine } from "react-icons/ri";
 
 const Footer = () => {
     return (
@@ -70,6 +71,13 @@ const Footer = () => {
                                 <li className='text-white'>
                                     <a className=' ' href=" ">Ethics</a>
                                 </li>
+                            </ul>
+                            <h3 className='text-primary my-4 text-2xl'>WE ACCEPTS</h3>
+                            <ul className='mt-4 flex'>
+                                <a href="https://www.facebook.com/"><FaCcMastercard className='text-white text-4xl pl-2' /></a>
+                                <a href="https://www.instagram.com/"><FaCcPaypal className='text-white text-4xl pl-2' /></a>
+                                <a href="https://twitter.com/"><FaCcVisa className='text-white text-4xl pl-2' /></a>
+                                <a href="https://www.youtube.com/"><RiMastercardLine className='text-white text-4xl pl-2' /></a>
                             </ul>
                         </div>
                     </div>
