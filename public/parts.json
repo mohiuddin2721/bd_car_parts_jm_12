@@ -1,0 +1,110 @@
+[
+    {
+      "id": "1",
+      "picture": "https://i.ibb.co/LhvTpC4/ac1.jpg",
+      "price": 42984,
+      "titleName": "Walton Air Conditioner WSN-",
+      "quantity": "134",
+      "supplier": "WALTON",
+      "description": "Air Conditioner Type: Non-Inverter. Function:Cooling. Cooling Capacity: 5275 Watts (18000 BTU/hr). Refrigerant: R-410a. Compressor: Rotary (Fixed Speed).\r\n"
+    },
+    {
+      "id": "2",
+      "picture": "https://i.ibb.co/sR5cVQB/ac11.jpg",
+      "price": 115000,
+      "titleName": "24000BTU - VertiCool",
+      "quantity": "113",
+      "supplier": "HAIER",
+      "description": "Display: Hidden LED. Capacity(BTU): 24000. Power input(W): 2100. EER: 3.35. Running current(A): 8.9. Power supply (Ph,V,Hz): 1/220-240/50HZ.\r\n"
+    },
+    {
+      "id": "3",
+      "picture": "https://i.ibb.co/2jKQg8Q/ac9.jpg",
+      "price": 65900,
+      "titleName": "GSH-18NFV",
+      "quantity": "82",
+      "supplier": "GREE",
+      "description": "Smart Energy saving operation. 18000 BTU. Cold Air Prevention. Auto Clean Function. Adjustable air flow volume. Up/down swing flaps & LED Display\r\n"
+    },
+    {
+      "id": "4",
+      "picture": "https://i.ibb.co/9rCQVZK/ac4.jpg",
+      "price": 33045,
+      "titleName": "WSN-KRYSTALINE-12F",
+      "quantity": "76",
+      "supplier": "WALTON",
+      "description": "Function: Cooling. Air Conditioner Type: Non-Inverter. Refrigerant: R-410a. BTU/hr: 12000BTU/hr: 12000. Rated Voltage: 220V-240V ~ 50Hz. COP: 2.8.\r\n"
+    },
+    {
+      "id": "5",
+      "picture": "https://i.ibb.co/H2DS1BQ/ac8.jpg",
+      "price": 53000,
+      "titleName": "GS-18NFA410",
+      "quantity": "48",
+      "supplier": "GREE",
+      "description": "Control: Remote. Function: Cooling. Capacity: 18000 BTU. Color: White & Golden. Comfortable Sleeping mood. compressor ------5 year.\r\n"
+    },
+    {
+      "id": "6",
+      "picture": "https://i.ibb.co/wwZMv7W/ac6.jpg",
+      "price": 59000,
+      "titleName": "AR12TVHYDWKUFE",
+      "quantity": "84",
+      "supplier": "SAMSUNG",
+      "description": "Free Installation all over Bangladesh by SAMSUNG BANGLADESH. Copper Pipe free up to 15 feet. Angle price 1500 Taka. Room: 120 SFT.\r\n"
+    },
+    {
+      "id": "7",
+      "picture": "https://i.ibb.co/dBqkCzf/ac7.jpg",
+      "price": 83900,
+      "titleName": "AR24TVHYDWKUFE",
+      "quantity": "94",
+      "supplier": "SAMSUNG",
+      "description": "Free Installation all over Bangladesh by SAMSUNG BANGLADESH. Copper Pipe free up to 15 feet. Angle price 1500 Taka. Room: 240 SFT.\r\n"
+    },
+    {
+      "id": "8",
+      "picture": "https://i.ibb.co/8Bmc1jT/ac5.jpg",
+      "price": 75000,
+      "titleName": "AR18TVHYDWKUFE",
+      "quantity": "103",
+      "supplier": "SAMSUNG",
+      "description": "World's First* 8 Pole Digital Inverter (1.5 TR). Available Color : White. Room : Bedroom Warranty : 1 Year Service Warranty. Size : 1.5 TON.\r\n"
+    },
+    {
+      "id": "9",
+      "picture": "https://i.ibb.co/94BbVYR/ac3.jpg",
+      "price": 32217,
+      "titleName": "WSN-RIVERINE-12F",
+      "quantity": "56",
+      "supplier": "WALTON",
+      "description": "Air Conditioner Type:Non-Inverter. Function: Cooling. Cooling Capacity: 3517 Watts (12000 BTU/h). Compressor: Rotary (Fixed Speed). Refrigerant: R-410a.\r\n"
+    },
+    {
+      "id": "10",
+      "picture": "https://i.ibb.co/MDXhz0z/ac10.jpg",
+      "price": 45000,
+      "titleName": "GS-12LM LOMO",
+      "quantity": "74",
+      "supplier": "GREE",
+      "description": "Golden Fin Condenser. Six Health Filters. Poweful and Tropical Compressor. Magic Mirror. Low Voltage Start Up. Four way Air Outlet.\r\n"
+    },
+    {
+      "id": "11",
+      "picture": "https://i.ibb.co/28prKSK/ac2.jpg",
+      "price": 62032,
+      "titleName": "WSI-RIVERINE-24C",
+      "quantity": "110",
+      "supplier": "WALTON",
+      "description": "Air Conditioner Type:Twinfold Inverter. Function:Cooling. Cooling Capacity:7034 Watts (24000 BTU/hr). Refrigerant:R-410a. Compressor:Dual Rotary (Inverter).\r\n"
+    },
+    {
+      "id": "12",
+      "picture": "https://i.ibb.co/KxmLRP1/ac12.jpg",
+      "price": 74490,
+      "titleName": "HSU-24CTC/WSR1",
+      "quantity": "87",
+      "supplier": "HAIER",
+      "description": "Display: Hidden LED. Capacity(BTU): 24000. Power input(W): 2315. EER: 3.04. Running current(A): 10.1. Power supply (Ph,V,Hz): 1/220-240/50HZ.\r\n"
+    }
+  ]
