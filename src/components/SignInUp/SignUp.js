@@ -31,7 +31,7 @@ const SignUp = () => {
 
     if (user || gUser) {
         // console.log(gUser || user);
-        navigate('/appointment');
+        navigate('/signIn');
     }
 
     const onSubmit = async data => {
