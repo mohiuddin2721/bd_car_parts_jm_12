@@ -10,6 +10,7 @@ import RequireAuth from '../src/components/SignInUp/RequireAuth';
 import Blog from './components/others/Blog';
 import MyPortfolio from './components/others/MyPortfolio';
 import NotFound from './components/Shared/NotFound';
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -25,6 +26,11 @@ function App() {
         <Route path='/purchase/:id' element={
           <RequireAuth>
             <Purchase></Purchase>
+          </RequireAuth>
+        }></Route>
+        <Route path='/dashboard' element={
+          <RequireAuth>
+            <Dashboard></Dashboard>
           </RequireAuth>
         }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>

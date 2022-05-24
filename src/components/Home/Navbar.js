@@ -25,6 +25,9 @@ const Navbar = () => {
                         <li><Link to='/home' className='font-bold'>HOME</Link></li>
                         <li><Link to='/blog' className='font-bold'>BLOG</Link></li>
                         <li><Link to='/myPortfolio' className='font-bold'>MY PORTFOLIO</Link></li>
+                        {
+                            user && <li><Link to='/dashboard' className='font-bold'>DASHBOARD</Link></li>
+                        }
                         <li>{user ? <button onClick={logout} className="btn font-bold btn-ghost">Sign Out</button> : <Link to='/signIn' className='font-bold'>SIGN IN</Link>}</li>
                         {
                             user &&
@@ -41,6 +44,9 @@ const Navbar = () => {
                     <li><Link to='/home' className='font-bold'>HOME</Link></li>
                     <li><Link to='/blog' className='font-bold'>BLOG</Link></li>
                     <li><Link to='/myPortfolio' className='font-bold'>MY PORTFOLIO</Link></li>
+                    {
+                        user && <li><Link to='/dashboard' className='font-bold'>DASHBOARD</Link></li>
+                    }
                     <li>{user ? <button onClick={logout} className="btn font-bold btn-ghost">Sign Out</button> : <Link to='/signIn' className='font-bold'>SIGN IN</Link>}</li>
                     {
                         user &&

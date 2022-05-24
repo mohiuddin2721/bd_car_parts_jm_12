@@ -33,7 +33,7 @@ const Purchase = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            // console.log(data);
             alert('users added successfully!!!');
             event.target.reset();
         })
