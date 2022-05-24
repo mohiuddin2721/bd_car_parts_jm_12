@@ -4,8 +4,8 @@
       "name": "Bumpers",
       "image": "https://i.ibb.co/59w2CsS/parts1.webp",
       "description": "FRP FIBER GLASS MATERIAL. READY TO PAINT AND PRIME BEFORE INSTALL. SEND BY EXPRESS WAY 7-15 DAYS DELIVERY WITH TRACKING NUMBER. (Fixed Speed).\r\n",
-      "orderQuantity": "100",
-      "availableQuantity": "1200",
+      "orderQuantity": 100,
+      "availableQuantity": 1200,
       "price": 500
     },
     {
@@ -13,8 +13,8 @@
       "name": "Gaido Super Alternator",
       "image": "https://i.ibb.co/Pjm74bf/parts9.webp",
       "description": "Aluminum extrusion in Italy reaches very high standards, so much so that it is appreciated, and therefore in demand, from all over the world (Fixed Speed).\r\n",
-      "orderQuantity": "100",
-      "availableQuantity": "1100",
+      "orderQuantity": 100,
+      "availableQuantity": 1100,
       "price": 550
     },
     {
@@ -22,8 +22,8 @@
       "name": "CAR HEADLIGHTS",
       "image": "https://i.ibb.co/Fbb3yBs/parts6.webp",
       "description": "Automotive lighting industry. LED reflectors. Electronics manufacturers. Household products. RayVac specializes in applying a simulated chrome finish to non-porous base materials (Fixed Speed).\r\n",
-      "orderQuantity": "100",
-      "availableQuantity": "1000",
+      "orderQuantity": 100,
+      "availableQuantity": 1000,
       "price": 570
     },
     {
@@ -31,8 +31,8 @@
       "name": "Oil Filter",
       "image": "https://i.ibb.co/qJCsjC2/parts4.webp",
       "description": "COPY OF 1 SET COVER CAP FOR OIL FILTER HOUSING.Warranty 1year, CertificationISO 9001:2008, UsageAutomobiles, Machines (Fixed Speed).\r\n",
-      "orderQuantity": "100",
-      "availableQuantity": "700",
+      "orderQuantity": 100,
+      "availableQuantity": 700,
       "price": 600
     },
     {
@@ -40,8 +40,8 @@
       "name": "Performance Tool",
       "image": "https://i.ibb.co/Cmhqm4B/parts12.webp",
       "description": "Portable, fast, and very simple to use battery starting and charging system Analyzer.Digital display indicates the condition of your battery and charging system. (Fixed Speed).\r\n",
-      "orderQuantity": "100",
-      "availableQuantity": "900",
+      "orderQuantity": 100,
+      "availableQuantity": 900,
       "price": 700
     },
     {
@@ -49,8 +49,8 @@
       "name": "Tyres",
       "image": "https://i.ibb.co/p4sXjCV/parts11.webp",
       "description": "We supply and fit tyres for cars, vans and 4x4's including low profile and run flat tyres in budget, midrange and premium brands.(Fixed Speed).\r\n",
-      "orderQuantity": "100",
-      "availableQuantity": "1200",
+      "orderQuantity": 100,
+      "availableQuantity": 1200,
       "price": 780
     }
   ]
