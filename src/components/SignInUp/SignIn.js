@@ -1,15 +1,39 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import Loading from '../Shared/Loading';
 
 
 const SignIn = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    let errorMessage;
+
+    if (gLoading || loading) {
+        return <Loading></Loading>
+    }
+
+    if (gError || error) {
+        errorMessage = <p className='text-red-500'><small>{error?.message || gError?.message}</small></p>
+    }
+
 
     const onSubmit = data => {
-        console.log(data)
+        // console.log(data)
+        signInWithEmailAndPassword(data.email, data.password)
     };
-
 
     return (
         <div className='flex justify-center items-center h-auto my-4'>
@@ -69,7 +93,7 @@ const SignIn = () => {
                                 {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors?.password?.message}</span>}
                             </label>
                         </div>
-
+                        {errorMessage}
                         <input className='btn btn-secondary max-w-xs text-white w-full' type="submit" value='SIGN IN' />
                     </form>
 
@@ -77,7 +101,10 @@ const SignIn = () => {
 
                     <div className="divider">OR</div>
 
-                    <button className="btn btn-outline btn-secondary">Sigh In With Google</button>
+                    <button
+                        onClick={() => signInWithGoogle()}
+                        className="btn btn-outline btn-secondary"
+                    >Sigh In With Google</button>
 
                 </div>
             </div>
