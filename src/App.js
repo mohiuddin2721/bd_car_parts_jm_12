@@ -5,6 +5,8 @@ import Footer from './components/Shared/Footer';
 import SignIn from './components/SignInUp/SignIn';
 import Navbar from '../src/components/Home/Navbar';
 import SignUp from './components/SignInUp/SignUp';
+import Purchase from './components/Home/Purchase';
+import RequireAuth from '../src/components/SignInUp/RequireAuth';
 
 function App() {
   return (
@@ -15,6 +17,11 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/signIn' element={<SignIn></SignIn>}></Route>
         <Route path='/signUp' element={<SignUp></SignUp>}></Route>
+        <Route path='/purchase/:id' element={
+        <RequireAuth>
+          <Purchase></Purchase>
+        </RequireAuth>
+      }></Route>
       </Routes>
       <Footer></Footer>
     </div>
