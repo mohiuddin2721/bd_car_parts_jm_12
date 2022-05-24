@@ -72,6 +72,13 @@ const Purchase = () => {
                                     </div>
                                     <div className="form-control mb-2">
                                         <input
+                                            {...register("price")}
+                                            value={item?.price}
+                                            className="input input-bordered"
+                                        />
+                                    </div>
+                                    <div className="form-control mb-2">
+                                        <input
                                             {...register("name", { required: true })}
                                             placeholder="Your Name"
                                             className="input input-bordered"
