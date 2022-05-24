@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
 
 
 const SignIn = () => {
@@ -11,10 +12,10 @@ const SignIn = () => {
 
 
     return (
-        <div className='flex justify-center items-center h-screen'>
+        <div className='flex justify-center items-center h-auto my-4'>
             <div className="card w-96 bg-neutral text-neutral-content">
                 <div className="card-body items-center text-center">
-                    <h2 className="card-title">SIGN IN</h2>
+                    <h2 className="card-title font-bold">SIGN IN</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
 
                         <div className="form-control w-full max-w-xs">
@@ -71,6 +72,8 @@ const SignIn = () => {
 
                         <input className='btn btn-secondary max-w-xs text-white w-full' type="submit" value='SIGN IN' />
                     </form>
+
+                    <p><small>New to BD Car Parts? <Link className='text-secondary' to='/signUp'>Create new account</Link></small></p>
 
                     <div className="divider">OR</div>
 
