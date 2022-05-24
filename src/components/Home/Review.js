@@ -9,9 +9,9 @@ const Review = ({ review }) => {
                 <img src={image} alt="Shoes" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
-                <h2 className="card-title">{name}</h2>
-                <p><small>{comment.slice(0, 60)}...</small></p>
-                <p>Ratting: {ratting}</p>
+                <h2 className="card-title font-bold">{name}</h2>
+                <p className='leading-none'><small>{comment.slice(0, 60)}...</small></p>
+                <p className='leading-none'>Ratting: {ratting}</p>
             </div>
         </div>
     );
