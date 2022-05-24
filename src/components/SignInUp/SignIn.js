@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -18,6 +18,14 @@ const SignIn = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
+
+    let from = location.state?.from?.pathname || "/";
+
+    useEffect(() => {
+        if (gUser || user) {
+            navigate(from, { replace: true });
+        }
+    }, [from, navigate, user, gUser]);
 
     let errorMessage;
 
