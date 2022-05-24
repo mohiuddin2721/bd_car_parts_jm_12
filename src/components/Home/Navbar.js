@@ -23,10 +23,15 @@ const Navbar = () => {
                     </label>
                     <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to='/home' className='font-bold'>HOME</Link></li>
-                        <li><a className='font-bold'>BLOG</a></li>
-                        <li><a className='font-bold'>ABOUT</a></li>
-                        <li><a className='font-bold'>MY PORTFOLIO</a></li>
-                        <li>{user ? <button onClick={logout} className="btn btn-active btn-ghost">Sign Out</button> : <Link to='/signIn' className='font-bold'>SIGN IN</Link>}</li>
+                        <li><Link to='/blog' className='font-bold'>BLOG</Link></li>
+                        <li><Link to='/myPortfolio' className='font-bold'>MY PORTFOLIO</Link></li>
+                        <li>{user ? <button onClick={logout} className="btn font-bold btn-ghost">Sign Out</button> : <Link to='/signIn' className='font-bold'>SIGN IN</Link>}</li>
+                        {
+                            user &&
+                            <>
+                                <li className='font-bold'>{user?.displayName}</li>
+                            </>
+                        }
                     </ul>
                 </div>
                 <li><Link to='/' className="btn btn-ghost normal-case text-xl">BD-CAR-PARTS</Link></li>
@@ -34,10 +39,16 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <li><Link to='/home' className='font-bold'>HOME</Link></li>
-                    <li><a className='font-bold'>BLOG</a></li>
-                    <li><a className='font-bold'>ABOUT</a></li>
-                    <li><a className='font-bold'>MY PORTFOLIO</a></li>
-                    <li>{user ? <button onClick={logout} className="btn btn-active btn-ghost">Sign Out</button> : <Link to='/signIn' className='font-bold'>SIGN IN</Link>}</li>
+                    <li><Link to='/blog' className='font-bold'>BLOG</Link></li>
+                    <li><Link to='/myPortfolio' className='font-bold'>MY PORTFOLIO</Link></li>
+                    <li>{user ? <button onClick={logout} className="btn font-bold btn-ghost">Sign Out</button> : <Link to='/signIn' className='font-bold'>SIGN IN</Link>}</li>
+                    {
+                        user &&
+                        <>
+                            <li className='font-bold items-center pl-1'>{user?.displayName}</li>
+                            <li><img style={{ 'borderRadius': '50%', 'maxHeight': '50px' }} src={user?.photoURL} alt="" /></li>
+                        </>
+                    }
                 </ul>
             </div>
         </div>
