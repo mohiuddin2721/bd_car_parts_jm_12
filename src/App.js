@@ -11,6 +11,9 @@ import Blog from './components/others/Blog';
 import MyPortfolio from './components/others/MyPortfolio';
 import NotFound from './components/Shared/NotFound';
 import Dashboard from './components/Dashboard/Dashboard';
+import MyProfile from './components/Dashboard/MyProfile';
+import MyOrders from './components/Dashboard/MyOrders';
+import AddReview from './components/Dashboard/AddReview';
 
 function App() {
   return (
@@ -32,7 +35,11 @@ function App() {
           <RequireAuth>
             <Dashboard></Dashboard>
           </RequireAuth>
-        }></Route>
+        }>
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path='addReview' element={<AddReview></AddReview>}></Route>
+          <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
+        </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
