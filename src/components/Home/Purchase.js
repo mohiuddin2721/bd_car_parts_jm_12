@@ -31,12 +31,12 @@ const Purchase = () => {
             },
             body: JSON.stringify(data)
         })
-        .then(res => res.json())
-        .then(data => {
-            // console.log(data);
-            alert('Your purchase successful!!!');
-            event.target.reset();
-        })
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                alert('Your purchase successful!!!');
+                event.target.reset();
+            })
     };
 
     return (
@@ -58,6 +58,7 @@ const Purchase = () => {
                                 <form onSubmit={handleSubmit(onSubmit)}>
                                     <div className="form-control mb-2">
                                         <input
+                                            type="email"
                                             {...register("email")}
                                             value={user?.email}
                                             className="input input-bordered"
@@ -65,6 +66,7 @@ const Purchase = () => {
                                     </div>
                                     <div className="form-control mb-2">
                                         <input
+                                            type="text"
                                             {...register("items")}
                                             value={item?.name}
                                             className="input input-bordered"
@@ -72,6 +74,7 @@ const Purchase = () => {
                                     </div>
                                     <div className="form-control mb-2">
                                         <input
+                                            type="number"
                                             {...register("price")}
                                             value={item?.price}
                                             className="input input-bordered"
@@ -79,6 +82,7 @@ const Purchase = () => {
                                     </div>
                                     <div className="form-control mb-2">
                                         <input
+                                            type="text"
                                             {...register("name", { required: true })}
                                             placeholder="Your Name"
                                             className="input input-bordered"
@@ -86,6 +90,7 @@ const Purchase = () => {
                                     </div>
                                     <div className="form-control mb-2">
                                         <input
+                                            type="number"
                                             {...register("number", { required: true })}
                                             placeholder="Your Phone Number"
                                             className="input input-bordered"
@@ -93,6 +98,7 @@ const Purchase = () => {
                                     </div>
                                     <div className="form-control mb-2">
                                         <textarea
+                                            type="text"
                                             {...register("address", { required: true })}
                                             placeholder="Your Address"
                                             className="input input-bordered"
@@ -103,6 +109,7 @@ const Purchase = () => {
                                             <span className="label-text">Quantity</span>
                                         </label>
                                         <input
+                                            type="number"
                                             {...register("quantity", {
                                                 max: {
                                                     value: item?.availableQuantity,
@@ -138,12 +145,9 @@ const Purchase = () => {
                                                     className='btn btn-primary'
                                                     value="Purchase"
                                                 />
-
                                         }
-
                                     </div>
                                 </form>
-
                             </div>
                         </div>
                     </div>
