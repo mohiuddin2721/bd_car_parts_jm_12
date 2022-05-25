@@ -11,7 +11,7 @@ const MyOrders = () => {
             fetch(`http://localhost:5000/orders?email=${user.email}`)
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                    // console.log(data);
                     setMyOrders(data)
                 })
         }
@@ -19,9 +19,9 @@ const MyOrders = () => {
 
     return (
         <div>
-            <h1>My orders .............{myOrders.length}</h1>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <h1 className='my-2 text-green-600'>My all orders... <span className='font-bold'>{myOrders.length}</span></h1>
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>
