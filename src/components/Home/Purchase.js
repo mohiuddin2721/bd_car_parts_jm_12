@@ -34,7 +34,7 @@ const Purchase = () => {
         .then(res => res.json())
         .then(data => {
             // console.log(data);
-            alert('users added successfully!!!');
+            alert('Your purchase successful!!!');
             event.target.reset();
         })
     };
