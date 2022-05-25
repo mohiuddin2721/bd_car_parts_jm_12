@@ -22,7 +22,28 @@ const AddReview = () => {
         })
         .then(res => res.json())
         .then(result => {
-            console.log('imgBBB', result);
+            // console.log('imgBBB', result);
+            if(result.success){
+                const img= result.data.url;
+                const review = {
+                    name: data.name,
+                    comment: data.comment,
+                    ratting: data.ratting,
+                    image: img
+                }
+                // now send review database 
+                fetch('http://localhost:5000/reviews', {
+                    method: 'POST',
+                    headers: {
+                        'content-type' : 'application/json'
+                    },
+                    body: JSON.stringify(review)
+                })
+                .then(res => res.json())
+                .then(posted => {
+                    console.log('review', posted);
+                })
+            }
         })
     };
 
