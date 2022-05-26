@@ -21,10 +21,11 @@ const Dashboard = () => {
                     <li><Link className='font-bold' to='/dashboard'>My Orders</Link></li>
                     <li><Link className='font-bold' to='/dashboard/addReview'>Add A Review</Link></li>
                     <li><Link className='font-bold' to='/dashboard/myProfile'>My Profile</Link></li>
-                    <li><Link className='font-bold' to='/dashboard/manageOrders'>Manage orders</Link></li>
-                    <li><Link className='font-bold' to='/dashboard/addProduct'>Add Product</Link></li>
+                    {admin && <li><Link className='font-bold' to='/dashboard/manageOrders'>Manage orders</Link></li>}
+                    {admin && <li><Link className='font-bold' to='/dashboard/addProduct'>Add Product</Link></li>}
                     {admin && <li><Link className='font-bold' to='/dashboard/makeAdmin'>Make Admin</Link></li>}
-                    <li><Link className='font-bold' to='/dashboard/manageItems'>Manage Items</Link></li>
+                    {admin && <li><Link className='font-bold' to='/dashboard/manageItems'>Manage Items</Link></li>}
+                    
                 </ul>
 
             </div>
