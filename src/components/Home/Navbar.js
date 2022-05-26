@@ -10,7 +10,7 @@ const Navbar = () => {
 
     const logout = () => {
         signOut(auth);
-        // localStorage.removeItem('accessToken');
+        localStorage.removeItem('accessToken');
         navigate('/');
     };
 
@@ -51,7 +51,7 @@ const Navbar = () => {
                     {
                         user &&
                         <>
-                            <li className='font-bold items-center pl-1'>{user?.displayName}</li>
+                            <li className='font-bold items-center pl-1 text-white'>{user?.displayName}</li>
                             <li><img style={{ 'borderRadius': '50%', 'maxHeight': '50px' }} src={user?.photoURL} alt="" /></li>
                         </>
                     }

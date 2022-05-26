@@ -13,7 +13,12 @@ const Purchase = () => {
 
     useEffect(() => {
         const url = `http://localhost:5000/parts/${id}`;
-        fetch(url)
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
             .then(res => res.json())
             .then(data => {
                 setItem(data);
