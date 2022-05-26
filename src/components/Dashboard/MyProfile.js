@@ -9,7 +9,7 @@ const MyProfile = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
 
     const onSubmit = (data, event) => {
-        console.log(data)
+        // console.log(data)
         const profile = {
             education: data.education,
             linkedin: data.linkedin,
@@ -27,8 +27,9 @@ const MyProfile = () => {
         })
             .then(res => res.json())
             .then(posted => {
-                console.log('profile', posted);
-            })
+                // console.log('profile', posted);
+            });
+            event.target.reset();
     };
 
     return (
