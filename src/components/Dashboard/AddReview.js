@@ -31,7 +31,7 @@ const AddReview = () => {
                     ratting: data.ratting,
                     image: img
                 }
-                // now send review database 
+                // now send review to database 
                 fetch('http://localhost:5000/reviews', {
                     method: 'POST',
                     headers: {
@@ -49,8 +49,8 @@ const AddReview = () => {
 
     return (
         <div className='ml-4'>
-            <h1 className='text-2xl text-green-500 font-bold'>Please add your valuable review</h1>
-            <div>
+            <h1 className='text-2xl text-green-500 font-bold text-center my-2'>Please add your valuable review</h1>
+            <div className='grid justify-center'>
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                     <div className="form-control w-full max-w-xs">
