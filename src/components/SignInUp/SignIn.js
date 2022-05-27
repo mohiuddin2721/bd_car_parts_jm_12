@@ -5,6 +5,7 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 import useToken from '../../hooks/useToken';
+import { FaGoogle } from "react-icons/fa";
 
 
 const SignIn = () => {
@@ -115,7 +116,9 @@ const SignIn = () => {
                     <button
                         onClick={() => signInWithGoogle()}
                         className="btn btn-outline btn-secondary"
-                    >Sigh In With Google</button>
+                    >Sigh In With Google
+                    <FaGoogle className='pl-2 text-2xl' />
+                    </button>
 
                 </div>
             </div>

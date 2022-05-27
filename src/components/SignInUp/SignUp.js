@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useToken from '../../hooks/useToken';
 import Loading from '../Shared/Loading';
+import { FaGoogle } from "react-icons/fa";
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -133,7 +134,9 @@ const SignUp = () => {
                     <button
                         onClick={() => signInWithGoogle()}
                         className="btn btn-outline btn-secondary"
-                    >Sigh In with google</button>
+                    >Sigh In with google
+                    <FaGoogle className='pl-2 text-2xl' />
+                    </button>
                 </div>
             </div>
         </div>

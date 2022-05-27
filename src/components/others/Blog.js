@@ -3,6 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className='my-8'>
+            <h2 className='font-bold text-center text-4xl text-green-600'>Read</h2>
             <div className="hero">
                 <div className="hero-content text-center">
                     <div className='card shadow-md'>
