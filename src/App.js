@@ -20,6 +20,7 @@ import MakeAdmin from './components/Dashboard/MakeAdmin';
 import AddProducts from './components/Dashboard/AddProducts';
 import ManageOrders from './components/Dashboard/ManageOrders';
 import ManageItems from './components/Dashboard/ManageItems';
+import RequireAdmin from './components/Dashboard/RequireAdmin';
 
 function App() {
   return (
@@ -41,7 +42,7 @@ function App() {
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
           <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
-          <Route path='makeAdmin' element={<MakeAdmin></MakeAdmin>}></Route>
+          <Route path='makeAdmin' element={<RequireAdmin><MakeAdmin></MakeAdmin></RequireAdmin>}></Route>
           <Route path='addProduct' element={<AddProducts></AddProducts>}></Route>
           <Route path='manageOrders' element={<ManageOrders></ManageOrders>}></Route>
           <Route path='manageItems' element={<ManageItems></ManageItems>}></Route>
