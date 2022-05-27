@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading';
 import ManageItemsRow from './ManageItemsRow';
+import DeleteConfirmModal from './DeleteConfirmModal';
 
 const ManageItems = () => {
+    const [deletingItem, setDeletingItem] = useState(null);
+
     const { data: parts, isLoading, refetch } = useQuery('parts', () => fetch('http://localhost:5000/parts', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -13,7 +16,6 @@ const ManageItems = () => {
     if (isLoading) {
         return <Loading></Loading>
     }
-    console.log(parts);
 
     return (
         <div>
@@ -32,10 +34,11 @@ const ManageItems = () => {
                     <tbody>
                         {
                             parts.map((part, index) => <ManageItemsRow
-                            key={part._id}
-                            part={part}
-                            index={index}
-                            refetch={refetch}
+                                key={part._id}
+                                part={part}
+                                index={index}
+                                refetch={refetch}
+                                setDeletingItem={setDeletingItem}
                             ></ManageItemsRow>)
                         }
                     </tbody>
@@ -50,6 +53,11 @@ const ManageItems = () => {
                     </tfoot>
                 </table>
             </div>
+            {deletingItem && <DeleteConfirmModal
+            deletingItem={deletingItem}
+            refetch={refetch}
+            setDeletingItem={setDeletingItem}
+            ></DeleteConfirmModal>}
         </div>
     );
 };
