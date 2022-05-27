@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const AddProducts = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -42,6 +43,8 @@ const AddProducts = () => {
                         .then(res => res.json())
                         .then(posted => {
                             console.log('product', posted);
+                            toast.success('Product added successfully!!!')
+                            event.target.reset();
                         })
                 }
             })

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const Purchase = () => {
@@ -28,18 +29,29 @@ const Purchase = () => {
 
     const onSubmit = (data, event) => {
         // console.log(data)
+        const order = {
+            productId: id,
+            email: user?.email,
+            items: item?.name,
+            price: item?.price * data.quantity,
+            name: data.name,
+            number: data.number,
+            address: data.address,
+            quantity: data.quantity
+        }
         const url = 'http://localhost:5000/orders';
         fetch(url, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(order)
         })
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
                 alert('Your purchase successful!!!');
+                toast.success('Thank you for select us');
                 event.target.reset();
             })
     };
