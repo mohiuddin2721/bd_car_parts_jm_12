@@ -21,6 +21,7 @@ const MyPortfolio = () => {
                         <p className='font-bold text-green-600 text-xl'>Projects:</p>
                         <p> <a className='font-bold text-blue-500 hover:text-orange-500' href="https://ac-stock-house.web.app/home">ac-stock-house</a> </p>
                         <p> <a className='font-bold text-blue-500 hover:text-orange-500' href="https://shawon-legal-consultant.web.app/">shawon-legal-consultant</a> </p>
+                        <p> <a className='font-bold text-blue-500 hover:text-orange-500' href="https://tesla-car-house-js8.netlify.app/">Tesla-car-house</a> </p>
                         <p className='font-bold text-green-600 text-xl'>I'm here</p>
                         <p>developermohiuddin1@gmail.com</p>
                         <p><a href="https://www.linkedin.com/in/k-m-mohiuddin-patwary/"><AiFillLinkedin className='text-3xl text-blue-500' /></a></p>
