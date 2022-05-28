@@ -7,7 +7,7 @@ import DeleteConfirmModal from './DeleteConfirmModal';
 const ManageItems = () => {
     const [deletingItem, setDeletingItem] = useState(null);
 
-    const { data: parts, isLoading, refetch } = useQuery('parts', () => fetch('http://localhost:5000/parts', {
+    const { data: parts, isLoading, refetch } = useQuery('parts', () => fetch('https://cryptic-tor-43534.herokuapp.com/parts', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

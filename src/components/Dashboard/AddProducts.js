@@ -32,7 +32,7 @@ const AddProducts = () => {
                         image: img
                     }
                     // now send review to database 
-                    fetch('http://localhost:5000/parts', {
+                    fetch('https://cryptic-tor-43534.herokuapp.com/parts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

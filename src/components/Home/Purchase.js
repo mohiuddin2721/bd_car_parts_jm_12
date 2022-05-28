@@ -13,7 +13,7 @@ const Purchase = () => {
     // console.log(user.email);
 
     useEffect(() => {
-        const url = `http://localhost:5000/parts/${id}`;
+        const url = `https://cryptic-tor-43534.herokuapp.com/parts/${id}`;
         fetch(url, {
             method: 'GET',
             headers: {
@@ -39,7 +39,7 @@ const Purchase = () => {
             address: data.address,
             quantity: data.quantity
         }
-        const url = 'http://localhost:5000/orders';
+        const url = 'https://cryptic-tor-43534.herokuapp.com/orders';
         fetch(url, {
             method: 'POST',
             headers: {

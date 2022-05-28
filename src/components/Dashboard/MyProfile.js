@@ -10,7 +10,7 @@ const MyProfile = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/profile?email=${user.email}`, {
+            fetch(`https://cryptic-tor-43534.herokuapp.com/profile?email=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -30,7 +30,7 @@ const MyProfile = () => {
             phone: data.phone,
             email: user.email
         }
-        const url = `http://localhost:5000/profile/${user?.email}`
+        const url = `https://cryptic-tor-43534.herokuapp.com/profile/${user?.email}`
         fetch(url, {
             method: 'PUT',
             headers: {

@@ -5,7 +5,7 @@ const Parts = () => {
     const [parts, setParts] = useState([]);
 
     useEffect( () => {
-        fetch('http://localhost:5000/parts')
+        fetch('https://cryptic-tor-43534.herokuapp.com/parts')
         .then(res => res.json())
         .then(data => {
             // console.log(data);
