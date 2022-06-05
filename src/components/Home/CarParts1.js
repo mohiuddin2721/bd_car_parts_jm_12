@@ -10,7 +10,7 @@ const CarParts1 = () => {
                 <div className="card-body">
                     <h2 className="card-title font-bold text-white">LAMPS & LIGHTS</h2>
                     <p className="text-white">MEGA SALE</p>
-                    <p className="text-white text-xs">FROM $500</p>
+                    <p className="text-white text-xs">PRICE $500</p>
                 </div>
                 <div className="card-actions">
                     <button className="btn btn-secondary">View Details</button>
