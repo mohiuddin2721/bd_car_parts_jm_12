@@ -5,9 +5,9 @@ import { FcLike } from "react-icons/fc";
 const BsSummary = () => {
     return (
         <div className='my-16'>
-            <p className='text-center text-primary text-2xl font-bold'>MILLIONS BUSINESS TRUST US</p>
+            <h1 className='text-primary text-center text-2xl font-bold'>MILLIONS BUSINESS TRUST US</h1>
             <p className='text-center'>TRY TO UNDERSTAND USERS EXPECTATION</p>
-            <div className="divider w-48 items-center mx-auto mt-0">  </div>
+            {/* <div className="divider w-48 items-center mx-auto mt-0">  </div> */}
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-2 pt-4'>
                 <div>
                     <FaUsers className='text-8xl mx-auto' />

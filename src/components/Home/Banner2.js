@@ -6,8 +6,8 @@ import parts6t from '../../images/parts6t.webp';
 
 const Banner2 = () => {
     return (
-        <div style={{ backgroundImage: `url(${bgCar1})` }} className='min-h-max bg-auto'>
-            <h2 className='text-secondary text-4xl my-4 font-bold ml-8'>BEST SELL</h2>
+        <div style={{ backgroundImage: `url(${bgCar1})` }} className='min-h-max bg-fixed bg-auto'>
+            <h2 className='section-title text-secondary text-4xl my-4 font-bold ml-8'>BEST SELL</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
                 <div>
                     <div>
