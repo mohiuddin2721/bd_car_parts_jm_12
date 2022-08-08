@@ -15,7 +15,7 @@ const Reviews = () => {
     return (
         <div className='my-12'>
             <div>
-                <h1 className='section-title uppercase md:text-[40px] text-secondary font-bold ml-8'>Businessmen's word</h1>
+                <h1 className='section-title uppercase text-[25px] md:text-[40px] font-bold ml-8'>Businessmen's word</h1>
             </div>
 
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 pt-4 mx-4'>
