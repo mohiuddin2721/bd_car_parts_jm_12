@@ -1,4 +1,5 @@
 import React from 'react';
+import MainButton from '../extra/MainButton';
 import './Banner1.css';
 
 const Banner1 = () => {
@@ -14,6 +15,7 @@ const Banner1 = () => {
                     offer products and services to multiple segments in parts,
                     completion, and production.
                 </p>
+                <MainButton>About Us</MainButton>
             </div>
         </section>
     );
