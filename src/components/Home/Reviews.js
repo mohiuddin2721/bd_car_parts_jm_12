@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Review from './Review';
 
 const Reviews = () => {
@@ -25,6 +26,9 @@ const Reviews = () => {
                         review={review}
                     ></Review>)
                 }
+            </div>
+            <div>
+                <Link className='btn btn-outline w-3/4 md:w-1/4 mx-auto flex btn-secondary rounded-full mt-6' to='/dashboard/addReview'>say something about us</Link>
             </div>
         </div>
     );
