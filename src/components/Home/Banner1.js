@@ -1,27 +1,21 @@
 import React from 'react';
-import bgCar3 from '../../images/bgCar3.webp';
-import bgCar2 from '../../images/bgCar2.webp';
+import './Banner1.css';
 
 const Banner1 = () => {
     return (
-        <div>
-            <div className="carousel w-full">
-                <div id="slide1" className="carousel-item relative w-full">
-                    <img src={bgCar3} className="w-full" alt='' />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide2" className="btn btn-circle">❮</a>
-                        <a href="#slide2" className="btn btn-circle">❯</a>
-                    </div>
-                </div>
-                <div id="slide2" className="carousel-item relative w-full">
-                    <img src={bgCar2} className="w-full" alt='' />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide1" className="btn btn-circle">❮</a>
-                        <a href="#slide1" className="btn btn-circle">❯</a>
-                    </div>
-                </div>
+        <section style={{backgroundImage: "url(https://i.ibb.co/CH4vPkt/bgCar3.webp)"}} className="banner-container bg-banner h-screen lg:h-[90vh] bg-fixed bg-no-repeat bg-cover text-white">
+            <div className="banner-content">
+                <h2 className="text-left text-3xl lg:text-5xl uppercase font-bold text-white">
+                    <span>BD CAR PARTS</span>
+                </h2>
+                <p className="w-[40ch] lg:w-[90ch] text-sm my-3">
+                    Since 1984, BD CAR PARTS has been a leading provider
+                    of cart parts to the land and offshore car parts markets. We now
+                    offer products and services to multiple segments in parts,
+                    completion, and production.
+                </p>
             </div>
-        </div>
+        </section>
     );
 };
 
