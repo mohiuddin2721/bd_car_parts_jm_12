@@ -14,7 +14,7 @@ const Reviews = () => {
             })
     }, [])
     return (
-        <div className='my-12'>
+        <div className='mt-12'>
             <div>
                 <h1 className='section-title uppercase text-[25px] md:text-[40px] font-bold ml-8'>Businessmen's word</h1>
             </div>

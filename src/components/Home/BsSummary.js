@@ -10,7 +10,7 @@ const BsSummary = () => {
 
     return (
         <section>
-            <div className="py-12 px-5">
+            <div className="pt-12 px-5">
                 <h1 className='section-title text-2xl md:text-4xl font-bold'>We Delivered car parts All Over The World</h1>
                 <div>
                     <div className="summery-inside-banner">

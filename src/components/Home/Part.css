@@ -1,0 +1,21 @@
+.part-card figure img {
+    object-fit: fill;
+    /* background-color: #000; */
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.4s ease;
+}
+
+.part-card:hover figure img {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.carPart1-card {
+    transform: scale(1);
+    opacity: 1;
+    transition: all 0.4s ease;
+}
+.carPart1-card:hover{
+    transform: scale(.9);
+}
