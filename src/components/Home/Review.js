@@ -1,8 +1,14 @@
 import React from 'react';
-import { AiFillStar } from "react-icons/ai";
+import Ratings from './Ratings';
+// import { AiFillStar } from "react-icons/ai";
 
 const Review = ({ review }) => {
     const { name, image, comment, ratting } = review;
+
+    const arr = [];
+    for (let i = 1; i <= ratting; i++) {
+        arr.push(i);
+    }
 
     return (
         <div className="card w-xs-max bg-base-100 shadow-md duration-300 hover:shadow-2xl">
@@ -18,8 +24,13 @@ const Review = ({ review }) => {
             </div>
             <div>
                 <p className='leading-none text-right mt-0 mb-2 mr-2'>
-                    Ratting: {ratting}
-                    <AiFillStar className='inline-block text-secondary items-center mb-1' />
+                    Ratting:
+                    {/* <AiFillStar className='inline-block text-secondary items-center mb-1' /> */}
+                    {
+                        arr.map(a=><Ratings
+                        key={a}
+                        ></Ratings>)
+                    }
                 </p>
             </div>
         </div>
