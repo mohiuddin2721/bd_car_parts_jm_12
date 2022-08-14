@@ -1,5 +1,6 @@
 import React from 'react';
 import Ratings from './Ratings';
+import './Review.css';
 // import { AiFillStar } from "react-icons/ai";
 
 const Review = ({ review }) => {
@@ -11,9 +12,9 @@ const Review = ({ review }) => {
     }
 
     return (
-        <div className="card w-xs-max bg-base-100 shadow-md duration-300 hover:shadow-2xl">
+        <div className="review-card card w-xs-max bg-base-100 shadow-md duration-300 hover:shadow-2xl">
             <div className="avatar">
-                <div className="w-24 rounded-xl mx-auto mt-8 mb-0">
+                <div className="review-img-div w-24 rounded-xl mx-auto mt-8 mb-0 ">
                     <img src={image} alt="Shoes" className="rounded-xl" />
                 </div>
             </div>
