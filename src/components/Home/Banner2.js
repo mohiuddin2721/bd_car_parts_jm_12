@@ -16,7 +16,7 @@ const Banner2 = () => {
                     <div>
                         <p className='text-white my-2 ml-8 text-xl font-bold'>Gaido Super Alternator</p>
                         <p className='text-white ml-8'>Aluminum extrusion in Italy reaches very high standards, so much so that it is appreciated, and therefore in demand, from all over the world</p>
-                        <p className='text-white ml-8'>Price: $550</p>
+                        <p className='text-white ml-8'>Price: $45</p>
                     </div>
                 </div>
                 <div>
@@ -26,7 +26,7 @@ const Banner2 = () => {
                     <div>
                         <p className='text-white my-2 ml-8 text-xl font-bold'>CAR HEADLIGHTS</p>
                         <p className='text-white ml-8'>Automotive lighting industry. LED reflectors. Electronics manufacturers. Household products. RayVac specializes in applying a simulated chrome finish to non-porous base materials</p>
-                        <p className='text-white ml-8'>Price: $570</p>
+                        <p className='text-white ml-8'>Price: $35</p>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@ import swal from 'sweetalert';
 const PartsFeatures = () => {
     return (
         <div className="py-20">
-            <h1 className='section-title text-4xl font-bold pl-16'>Our Product Feature</h1>
+            <h1 className='section-title text-4xl font-bold ml-16'>Our Product Feature</h1>
             <div className="flex flex-col lg:flex-row justify-center items-center max-w-7xl px-8 lg:mx-auto gap-20">
                 <div className="flex-1">
                     <h2 className="text-xl lg:text-3xl font-bold uppercase my-6">

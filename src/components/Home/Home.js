@@ -5,6 +5,7 @@ import BsSummary from './BsSummary';
 import CarParts1 from './CarParts1';
 import Parts from './Parts';
 import PartsFeatures from './PartsFeatures';
+import Process from './Process';
 import Reviews from './Reviews';
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             <PartsFeatures></PartsFeatures>
             <Banner2></Banner2>
             <Reviews></Reviews>
+            <Process></Process>
         </div>
     );
 };
