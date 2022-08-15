@@ -1,12 +1,13 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useAdmin from '../../hooks/useAdmin';
 
 const Dashboard = () => {
     const [user] = useAuthState(auth);
     const [admin] = useAdmin(user);
+    const { pathname } = useLocation();
     return (
         <div className="drawer drawer-mobile">
             <input id="sidebar-dashboard" type="checkbox" className="drawer-toggle" />
@@ -16,18 +17,16 @@ const Dashboard = () => {
             </div>
             <div className="drawer-side">
                 <label htmlFor="sidebar-dashboard" className="drawer-overlay"></label>
-                <ul className="menu p-4 overflow-y-auto w-54 bg-base-100 text-base-content">
+                <ul className="menu p-4 overflow-y-auto sm:w-52 w-1/2 bg-base-100 text-base-content">
                     {/* <!-- Sidebar content here --> */}
-                    <li><Link className='font-bold' to='/dashboard'>My Orders</Link></li>
-                    {!admin && <li><Link className='font-bold' to='/dashboard/addReview'>Add A Review</Link></li>}
-                    <li><Link className='font-bold' to='/dashboard/myProfile'>My Profile</Link></li>
-                    {admin && <li><Link className='font-bold' to='/dashboard/manageOrders'>Manage orders</Link></li>}
-                    {admin && <li><Link className='font-bold' to='/dashboard/addProduct'>Add Product</Link></li>}
-                    {admin && <li><Link className='font-bold' to='/dashboard/makeAdmin'>Make Admin</Link></li>}
-                    {admin && <li><Link className='font-bold' to='/dashboard/manageItems'>Manage Items</Link></li>}
-                    
+                    <li><Link to='/dashboard' className='font-bold'>My Orders</Link></li>
+                    {!admin && <li><Link to='/dashboard/addReview' className={`font-bold ${pathname.includes('/dashboard/addReview') && 'bg-[#fdb91c]'}`}>Add A Review</Link></li>}
+                    <li><Link to='/dashboard/myProfile' className={`font-bold ${pathname.includes('/dashboard/myProfile') && 'bg-[#fdb91c]'}`}>My Profile</Link></li>
+                    {admin && <li><Link to='/dashboard/manageOrders' className={`font-bold ${pathname.includes('/dashboard/manageOrders') && 'bg-[#fdb91c]'}`}>Manage orders</Link></li>}
+                    {admin && <li><Link to='/dashboard/addProduct' className={`font-bold ${pathname.includes('/dashboard/addProduct') && 'bg-[#fdb91c]'}`}>Add Product</Link></li>}
+                    {admin && <li><Link to='/dashboard/makeAdmin' className={`font-bold ${pathname.includes('/dashboard/makeAdmin') && 'bg-[#fdb91c]'}`}>Make Admin</Link></li>}
+                    {admin && <li><Link to='/dashboard/manageItems' className={`font-bold ${pathname.includes('/dashboard/manageItems') && 'bg-[#fdb91c]'}`}>Manage Items</Link></li>}
                 </ul>
-
             </div>
         </div>
     );
