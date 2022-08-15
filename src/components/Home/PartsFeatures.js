@@ -13,14 +13,18 @@ const PartsFeatures = () => {
                         We Make Using Car Part Comfortable
                     </h2>
                     <p>
-                        
+                        BD CAR PARTS Industries, a renowned industrial solutions supplier offers a unique combination 
+                        of know-how in plastics moulding technologies for clients in the automobile industry worldwide.
+
+                        Our research and development facilities, design offices and our practiced sales team provide us 
+                        with expertise that allows us to offer a full range of plastics based automotive solutions.
                     </p>
                 </div>
                 <div className="flex-1 flex items-center gap-10 mx-auto">
                     <div
                         onClick={() => {
                             swal(
-                                "",
+                                "The heart and soul of your vehicle is the internal combustion engine. The engine block features parts such as the timing chain, camshaft, crankshaft, spark plugs, cylinder heads, valves and pistons.",
                                 {
                                     className: "rounded-3xl",
                                 }
@@ -32,7 +36,7 @@ const PartsFeatures = () => {
                             <FaThumbtack className='bg-[#20b8d1] text-3xl px-2 py-1 rounded-lg' />
                         </span>
                         <div className="mt-4 lg:mt-7">
-                            <p className="text-sm"></p>
+                            <p className="text-sm">Engine</p>
                             <p className="text-[7px] lg:text-[10px]">
                                 Tab the box to see details
                             </p>
@@ -42,7 +46,7 @@ const PartsFeatures = () => {
                         <div
                             onClick={() => {
                                 swal(
-                                    "",
+                                    "The transmission is a gearbox filled with gears and gear trains that makes effective use of the engine’s torque to change the gears and power the vehicle.",
                                     {
                                         className: "rounded-3xl",
                                     }
@@ -54,7 +58,7 @@ const PartsFeatures = () => {
                                 <FaServicestack className='bg-[#3428a7] text-4xl px-2 py-1 rounded-lg' />
                             </span>
                             <div className="mt-4 lg:mt-7">
-                                <p className="text-sm"></p>
+                                <p className="text-sm">Transmission</p>
                                 <p className="text-[7px] lg:text-[10px]">
                                     Tab the box to see details
                                 </p>
@@ -63,7 +67,7 @@ const PartsFeatures = () => {
                         <div
                             onClick={() => {
                                 swal(
-                                    "",
+                                    "The battery delivers the electricity needed to run your vehicle’s electrical components. Without a battery, your car won’t run.",
                                     {
                                         className: "rounded-3xl",
                                     }
@@ -75,7 +79,7 @@ const PartsFeatures = () => {
                                 <AiOutlineRotateLeft className='bg-[#b8c4d6] text-4xl px-2 py-1 rounded-lg' />
                             </span>
                             <div className="mt-4 lg:mt-7">
-                                <p className="text-sm"></p>
+                                <p className="text-sm">Battery</p>
                                 <p className="text-[7px] lg:text-[10px]">
                                     Tab the box to see details
                                 </p>
@@ -85,7 +89,7 @@ const PartsFeatures = () => {
                     <div
                         onClick={() => {
                             swal(
-                                "",
+                                "The radiator is responsible for helping the engine keep cool by removing heat from coolant before it is pumped back through the engine.",
                                 {
                                     className: "rounded-3xl",
                                 }
@@ -97,7 +101,7 @@ const PartsFeatures = () => {
                             <FaDragon className='bg-[#3b3f61] text-4xl px-2 py-1 rounded-lg' />
                         </span>
                         <div className="mt-4 lg:mt-7">
-                            <p className="text-sm"></p>
+                            <p className="text-sm">Radiator</p>
                             <p className="text-[7px] lg:text-[10px]">
                                 Tab the box to see details
                             </p>
