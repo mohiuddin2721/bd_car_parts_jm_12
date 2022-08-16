@@ -28,7 +28,14 @@ const Navbar = () => {
                         <li><Link to='/blog' className='font-bold'>BLOG</Link></li>
                         <li><Link to='/myPortfolio' className='font-bold'>MY PORTFOLIO</Link></li>
                         {
-                            user && <li><Link to='/dashboard' className='font-bold'>DASHBOARD</Link></li>
+                            user && <li>
+                                <Link
+                                    to='/dashboard'
+                                    className='font-bold'
+                                >
+                                    DASHBOARD
+                                </Link>
+                            </li>
                         }
                         <li className='border'>{user ? <button onClick={logout} className="btn font-bold btn-ghost">Sign Out</button> : <Link to='/signIn' className='font-bold'>SIGN IN</Link>}</li>
                         {
@@ -41,13 +48,19 @@ const Navbar = () => {
                 </div>
                 <><Link to='/' className="btn btn-ghost normal-case text-xl">BCParts</Link></>
             </div>
-            <div className="navbar-end hidden lg:flex sticky">
+            <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <li><Link to='/home' className={`font-bold ${pathname.includes('home') && 'border-2 border-white my-border'}`}>HOME</Link></li>
                     <li><Link to='/blog' className={`font-bold ${pathname.includes('blog') && 'border-2 border-white my-border'}`}>BLOG</Link></li>
                     <li><Link to='/myPortfolio' className={`font-bold ${pathname.includes('myPortfolio') && 'border-2 border-white my-border'}`}>MY PORTFOLIO</Link></li>
                     {
-                        user && <li><Link to='/dashboard' className={`font-bold ${pathname.includes('dashboard') && 'border-2 border-white my-border'}`}>DASHBOARD</Link></li>
+                        user && <li>
+                            <Link to='/dashboard'
+                                className={`font-bold ${pathname.includes('dashboard') && 'border-2 border-white my-border'}`}
+                            >
+                                DASHBOARD
+                            </Link>
+                        </li>
                     }
                     <li>{user ? <button onClick={logout} className="btn font-bold btn-ghost">Sign Out</button> : <Link to='/signIn' className='font-bold'>SIGN IN</Link>}</li>
                     {
