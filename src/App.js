@@ -23,13 +23,21 @@ import ManageItems from './components/Dashboard/ManageItems';
 import RequireAdmin from './components/Dashboard/RequireAdmin';
 import Payment from './components/Dashboard/Payment';
 import MessengerCustomerChat from 'react-messenger-customer-chat/lib/MessengerCustomerChat';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from './firebase.init';
+import Loading from './components/Shared/Loading';
 
 function App() {
+  const [user, loading] = useAuthState(auth);
+
+  if(loading){
+    return <Loading></Loading>
+  }
+
   return (
     <div>
       <Navbar></Navbar>
       <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/signIn' element={<SignIn></SignIn>}></Route>
         <Route path='/signUp' element={<SignUp></SignUp>}></Route>
