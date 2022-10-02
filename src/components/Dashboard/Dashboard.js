@@ -23,9 +23,9 @@ const Dashboard = () => {
                     <li>
                         <Link
                             to='/dashboard'
-                            className='font-bold'
+                            className='font-bold focus:bg-[#fdb91c]'
                         >
-                            My Orders<span className={`font-bold text-white ${pathname.includes('/dashboard/myProfile') && 'text-[#fff] block text-xl'}`}><FaRunning></FaRunning></span>
+                            My Orders<span className={`font-bold text-white`}><FaRunning></FaRunning></span>
                         </Link>
                     </li>
                     {
@@ -33,7 +33,7 @@ const Dashboard = () => {
                             <Link to='/dashboard/addReview'
                                 className={`font-bold ${pathname.includes('/dashboard/addReview') && 'bg-[#fdb91c]'}`}
                             >
-                                Add A Review<span className={`font-bold text-white ${pathname.includes('/dashboard/myProfile') && 'text-[#fff] block text-xl'}`}><FaRunning></FaRunning></span>
+                                Add A Review<span><FaRunning className='text-white'></FaRunning></span>
                             </Link>
                         </li>
                     }
@@ -42,7 +42,7 @@ const Dashboard = () => {
                             to='/dashboard/myProfile'
                             className={`font-bold ${pathname.includes('/dashboard/myProfile') && 'bg-[#fdb91c]'}`}
                         >
-                            My Profile<span className={`font-bold text-white ${pathname.includes('/dashboard/myProfile') && 'text-[#fff] block text-xl'}`}><FaRunning></FaRunning></span>
+                            My Profile<span className={`font-bold text-white`}><FaRunning></FaRunning></span>
                         </Link>
                     </li>
                     {
@@ -50,7 +50,7 @@ const Dashboard = () => {
                             <Link to='/dashboard/manageOrders'
                                 className={`font-bold ${pathname.includes('/dashboard/manageOrders') && 'bg-[#fdb91c]'}`}
                             >
-                                Manage orders<span className={`font-bold text-white ${pathname.includes('/dashboard/myProfile') && 'text-[#fff] block text-xl'}`}><FaRunning></FaRunning></span>
+                                Manage orders<span className={`font-bold text-white`}><FaRunning></FaRunning></span>
                             </Link>
                         </li>
                     }
@@ -59,7 +59,7 @@ const Dashboard = () => {
                             <Link to='/dashboard/addProduct'
                                 className={`font-bold ${pathname.includes('/dashboard/addProduct') && 'bg-[#fdb91c]'}`}
                             >
-                                Add Product<span className={`font-bold text-white ${pathname.includes('/dashboard/myProfile') && 'text-[#fff] block text-xl'}`}><FaRunning></FaRunning></span>
+                                Add Product<span className={`font-bold text-white`}><FaRunning></FaRunning></span>
                             </Link>
                         </li>
                     }
@@ -68,7 +68,7 @@ const Dashboard = () => {
                             <Link to='/dashboard/makeAdmin'
                                 className={`font-bold ${pathname.includes('/dashboard/makeAdmin') && 'bg-[#fdb91c]'}`}
                             >
-                                Make Admin<span className={`font-bold text-white ${pathname.includes('/dashboard/myProfile') && 'text-[#fff] block text-xl'}`}><FaRunning></FaRunning></span>
+                                Make Admin<span className={`font-bold text-white`}><FaRunning></FaRunning></span>
                             </Link>
                         </li>
                     }
@@ -77,7 +77,7 @@ const Dashboard = () => {
                             <Link to='/dashboard/manageItems'
                                 className={`font-bold ${pathname.includes('/dashboard/manageItems') && 'bg-[#fdb91c]'}`}
                             >
-                                Manage Items<span className={`font-bold text-white ${pathname.includes('/dashboard/myProfile') && 'text-[#fff] block text-xl'}`}><FaRunning></FaRunning></span>
+                                Manage Items<span className={`font-bold text-white`}><FaRunning></FaRunning></span>
                             </Link>
                         </li>
                     }

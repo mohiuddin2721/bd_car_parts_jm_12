@@ -1,13 +1,14 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { AiOutlineDashboard } from 'react-icons/ai';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import CustomLink from './CustomLink';
 import './Navbar.css';
 
 
-const Navbar = ({ children }) => {
+const Navbar = () => {
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
     const { pathname } = useLocation();
@@ -65,7 +66,7 @@ const Navbar = ({ children }) => {
                         <CustomLink
                             to='/blog'
                             className='font-bold'
-                            // className={`font-bold ${pathname.includes('blog') && ' border-white my-border'}`}
+                        // className={`font-bold ${pathname.includes('blog') && ' border-white my-border'}`}
                         >
                             BLOG
                         </CustomLink>
@@ -74,15 +75,16 @@ const Navbar = ({ children }) => {
                         <CustomLink
                             to='/myPortfolio'
                             className='font-bold'
-                            // className={`font-bold ${pathname.includes('myPortfolio') && ' border-white my-border'}`}
+                        // className={`font-bold ${pathname.includes('myPortfolio') && ' border-white my-border'}`}
                         >
-                            MY PORTFOLIO
+                            PORTFOLIO
                         </CustomLink>
                     </li>
                     {
                         user && <li>
                             <CustomLink
                                 to='/dashboard'
+                                className='font-bold'
                             >
                                 DASHBOARD
                             </CustomLink>
@@ -97,16 +99,20 @@ const Navbar = ({ children }) => {
                     {
                         user &&
                         <>
-                            <li className='font-bold items-center pl-1 text-white'>{user?.displayName}</li>
+                            <li className='text-xs items-center pl-1 text-white'>{user?.displayName}</li>
                             <li><img style={{ 'borderRadius': '50%', 'maxHeight': '50px' }} src={user?.photoURL} alt="" /></li>
                         </>
                     }
                 </ul>
             </div>
             {
-                (pathname.includes('dashboard')) && <div className='sm:hidden navbar-end'>
+                (pathname.includes('dashboard'))
+                &&
+                <div className='sm:hidden navbar-end'>
                     <label tabIndex="1" htmlFor="sidebar-dashboard" className="btn btn-ghost btn-circle">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                        <AiOutlineDashboard className='text-3xl' />
+                        <span className='text-xs'>Dash</span>
+                        {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg> */}
                     </label>
                 </div>
             }
