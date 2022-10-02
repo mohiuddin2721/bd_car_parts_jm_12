@@ -15,13 +15,14 @@ import MyProfile from './components/Dashboard/MyProfile';
 import MyOrders from './components/Dashboard/MyOrders';
 import AddReview from './components/Dashboard/AddReview';
 import { ToastContainer } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 import MakeAdmin from './components/Dashboard/MakeAdmin';
 import AddProducts from './components/Dashboard/AddProducts';
 import ManageOrders from './components/Dashboard/ManageOrders';
 import ManageItems from './components/Dashboard/ManageItems';
 import RequireAdmin from './components/Dashboard/RequireAdmin';
 import Payment from './components/Dashboard/Payment';
+import MessengerCustomerChat from 'react-messenger-customer-chat/lib/MessengerCustomerChat';
 
 function App() {
   return (
@@ -51,6 +52,10 @@ function App() {
         </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <MessengerCustomerChat
+        pageId="<PAGE_ID>"
+        appId="6107189599298209"
+      ></MessengerCustomerChat>
       <Footer></Footer>
       <ToastContainer />
     </div>

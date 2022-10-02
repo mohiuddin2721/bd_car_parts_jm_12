@@ -3,9 +3,11 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import CustomLink from './CustomLink';
 import './Navbar.css';
 
-const Navbar = () => {
+
+const Navbar = ({ children }) => {
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
     const { pathname } = useLocation();
@@ -17,7 +19,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className="navbar bg-primary">
+        <div className="navbar bg-primary h-12">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost btn-circle sm:hidden">
@@ -26,7 +28,7 @@ const Navbar = () => {
                     <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to='/home' className='font-bold'>HOME</Link></li>
                         <li><Link to='/blog' className='font-bold'>BLOG</Link></li>
-                        <li><Link to='/myPortfolio' className='font-bold'>MY PORTFOLIO</Link></li>
+                        <li><Link to='/myPortfolio' className='font-bold'>PORTFOLIO</Link></li>
                         {
                             user && <li>
                                 <Link
@@ -49,20 +51,49 @@ const Navbar = () => {
                 <><Link to='/' className="btn btn-ghost normal-case text-xl">BCParts</Link></>
             </div>
             <div className="navbar-end hidden lg:flex">
-                <ul className="menu menu-horizontal p-0">
-                    <li><Link to='/home' className={`font-bold ${pathname.includes('home') && 'border-2 border-white my-border'}`}>HOME</Link></li>
-                    <li><Link to='/blog' className={`font-bold ${pathname.includes('blog') && 'border-2 border-white my-border'}`}>BLOG</Link></li>
-                    <li><Link to='/myPortfolio' className={`font-bold ${pathname.includes('myPortfolio') && 'border-2 border-white my-border'}`}>MY PORTFOLIO</Link></li>
+                <ul className="menu menu-horizontal">
+                    <li>
+                        <CustomLink
+                            to='/home'
+                            className='font-bold'
+                        // className={`font-bold ${pathname.includes('home') && 'border-white my-border'}`}
+                        >
+                            HOME
+                        </CustomLink>
+                    </li>
+                    <li>
+                        <CustomLink
+                            to='/blog'
+                            className='font-bold'
+                            // className={`font-bold ${pathname.includes('blog') && ' border-white my-border'}`}
+                        >
+                            BLOG
+                        </CustomLink>
+                    </li>
+                    <li>
+                        <CustomLink
+                            to='/myPortfolio'
+                            className='font-bold'
+                            // className={`font-bold ${pathname.includes('myPortfolio') && ' border-white my-border'}`}
+                        >
+                            MY PORTFOLIO
+                        </CustomLink>
+                    </li>
                     {
                         user && <li>
-                            <Link to='/dashboard'
+                            <CustomLink
+                                to='/dashboard'
+                            >
+                                DASHBOARD
+                            </CustomLink>
+                            {/* <Link to='/dashboard'
                                 className={`font-bold ${pathname.includes('dashboard') && 'border-2 border-white my-border'}`}
                             >
                                 DASHBOARD
-                            </Link>
+                            </Link> */}
                         </li>
                     }
-                    <li>{user ? <button onClick={logout} className="btn font-bold btn-ghost">Sign Out</button> : <Link to='/signIn' className='font-bold'>SIGN IN</Link>}</li>
+                    <li>{user ? <button onClick={logout} className="btn font-bold btn-ghost">Sign Out</button> : <CustomLink to='/signIn' className='font-bold'>SIGN IN</CustomLink>}</li>
                     {
                         user &&
                         <>
