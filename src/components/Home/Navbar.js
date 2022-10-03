@@ -30,23 +30,31 @@ const Navbar = () => {
                         <li><Link to='/home' className='font-bold'>HOME</Link></li>
                         <li><Link to='/blog' className='font-bold'>BLOG</Link></li>
                         <li><Link to='/myPortfolio' className='font-bold'>PORTFOLIO</Link></li>
-                        {
-                            user && <li>
-                                <Link
-                                    to='/dashboard'
-                                    className='font-bold'
-                                >
-                                    DASHBOARD
-                                </Link>
-                            </li>
-                        }
-                        <li className='border'>{user ? <button onClick={logout} className="btn font-bold btn-ghost">Sign Out</button> : <Link to='/signIn' className='font-bold'>SIGN IN</Link>}</li>
+                        <li>
+                            <Link
+                                to='/dashboard'
+                                className='font-bold'
+                            // className={`font-bold ${pathname.includes('myPortfolio') && ' border-white my-border'}`}
+                            >
+                                DASHBOARD
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to='/signUp'
+                                className='font-bold'
+                            // className={`font-bold ${pathname.includes('myPortfolio') && ' border-white my-border'}`}
+                            >
+                                REGISTRATION
+                            </Link>
+                        </li>
                         {
                             user &&
                             <>
                                 <li className='font-bold'>{user?.displayName}</li>
                             </>
                         }
+                        <li className='border'>{user ? <button onClick={logout} className="btn font-bold btn-ghost">Sign Out</button> : <Link to='/signIn' className='font-bold'>SIGN IN</Link>}</li>
                     </ul>
                 </div>
                 <><Link to='/home' className="btn btn-ghost normal-case text-xl">BCParts</Link></>
@@ -80,22 +88,17 @@ const Navbar = () => {
                             PORTFOLIO
                         </CustomLink>
                     </li>
-                    {
-                        user && <li>
-                            <CustomLink
-                                to='/dashboard'
-                                className='font-bold'
-                            >
-                                DASHBOARD
-                            </CustomLink>
-                            {/* <Link to='/dashboard'
-                                className={`font-bold ${pathname.includes('dashboard') && 'border-2 border-white my-border'}`}
-                            >
-                                DASHBOARD
-                            </Link> */}
-                        </li>
-                    }
-                    <li>{user ? <button onClick={logout} className="btn font-bold btn-ghost">Sign Out</button> : <CustomLink to='/signIn' className='font-bold'>SIGN IN</CustomLink>}</li>
+                    <li>
+                        <CustomLink
+                            to='/dashboard'
+                            className='font-bold'
+                        // className={`font-bold ${pathname.includes('myPortfolio') && ' border-white my-border'}`}
+                        >
+                            DASHBOARD
+                        </CustomLink>
+                    </li>
+                    <li>{user ? <button onClick={logout} className="btn font-bold btn-ghost">Sign Out</button> : <CustomLink to='/signIn' className='font-bold'>SignIn</CustomLink>}</li>
+
                     {
                         user &&
                         <>

@@ -15,28 +15,29 @@ const AboutUs = () => {
                 </ul>
                 <div>
                     <h1 className="text-xl font-bold">Find Us :</h1>
-                    <address>Rd No. 12, Dhanmondi Lake, Dhanmondi, Dhaka-1207, Bangladesh</address>
+                    <address>Rd No. 8A, Nikunjo-1, Kurmitola, Dhaka-1229, Bangladesh</address>
                     <h1 className="text-xl font-bold">Contact Us :</h1>
                     <p>+8801680106149</p>
                     <h1 className="text-xl font-bold">Mail:</h1>
                     <address>bdcarparts@gmail.com</address>
                 </div>
             </div>
+            {/* center={[23.75005494868502, 90.37491877181348] */}
             <div className="w-full border-4 flex justify-center items-center sm:w-1/2 mx-2">
-                <MapContainer center={[23.75005494868502, 90.37491877181348]} zoom={15} style={{ height: '300px', width: '100%' }}>
+                <MapContainer center={[23.82321, 90.41912]} zoom={15} style={{ height: '300px', width: '100%' }}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
                     <LayerGroup>
                         <Circle
-                            center={[23.749623157201363, 90.37721997237244]}
+                            center={[23.82321, 90.41912]}
                             pathOptions={{ color: 'green', fillColor: 'green' }}
                             radius={50}
                         />
                     </LayerGroup>
-                    <Marker position={[23.749623157201363, 90.37721997237244]}>
-                        <Tooltip>Chicony Electronics</Tooltip>
+                    <Marker position={[23.82321, 90.41912]}>
+                        <Tooltip>Bd Car Parts</Tooltip>
                     </Marker>
                 </MapContainer>
             </div>
