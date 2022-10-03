@@ -23,7 +23,7 @@ const AboutUs = () => {
                 </div>
             </div>
             {/* center={[23.75005494868502, 90.37491877181348] */}
-            <div data-aos="fade-down-left" data-aos-duration="2000" className="w-full border-4 flex justify-center items-center sm:w-1/2 mx-2">
+            <div data-aos="zoom-in-up" data-aos-duration="2000" className="w-full border-4 flex justify-center items-center sm:w-1/2 mx-2">
                 <MapContainer center={[23.82321, 90.41912]} zoom={15} style={{ height: '300px', width: '100%' }}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

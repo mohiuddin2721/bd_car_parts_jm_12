@@ -1,6 +1,11 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { FaRunning } from 'react-icons/fa';
+import { CgProfile } from 'react-icons/cg';
+import { SiManageiq, SiGoogletagmanager } from 'react-icons/si';
+import { MdBorderColor } from 'react-icons/md';
+import { AiOutlineAppstoreAdd } from 'react-icons/ai';
+import { GrUserAdmin } from 'react-icons/gr';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useAdmin from '../../hooks/useAdmin';
@@ -18,14 +23,14 @@ const Dashboard = () => {
             </div>
             <div className="drawer-side">
                 <label htmlFor="sidebar-dashboard" className="drawer-overlay"></label>
-                <ul className="menu p-4 overflow-y-auto sm:w-52 w-1/2 bg-base-100 text-base-content">
+                <ul className="menu p-4 overflow-y-auto sm:w-52 w-1/2 text-base-content bg-[#fce2a9]">
                     {/* <!-- Sidebar content here --> */}
                     <li>
                         <Link
                             to='/dashboard'
                             className='font-bold focus:bg-[#fdb91c]'
                         >
-                            My Orders<span className={`font-bold text-white`}><FaRunning></FaRunning></span>
+                            <MdBorderColor></MdBorderColor>My Orders<span className={`font-bold text-[#fce2a9]`}><FaRunning></FaRunning></span>
                         </Link>
                     </li>
                     {
@@ -33,7 +38,7 @@ const Dashboard = () => {
                             <Link to='/dashboard/addReview'
                                 className={`font-bold ${pathname.includes('/dashboard/addReview') && 'bg-[#fdb91c]'}`}
                             >
-                                Add A Review<span><FaRunning className='text-white'></FaRunning></span>
+                                Add A Review<span><FaRunning className='text-[#fce2a9]'></FaRunning></span>
                             </Link>
                         </li>
                     }
@@ -42,7 +47,7 @@ const Dashboard = () => {
                             to='/dashboard/myProfile'
                             className={`font-bold ${pathname.includes('/dashboard/myProfile') && 'bg-[#fdb91c]'}`}
                         >
-                            My Profile<span className={`font-bold text-white`}><FaRunning></FaRunning></span>
+                            <span><CgProfile></CgProfile></span>Profile<span className={`font-bold text-[#fce2a9]`}><FaRunning></FaRunning></span>
                         </Link>
                     </li>
                     {
@@ -50,7 +55,7 @@ const Dashboard = () => {
                             <Link to='/dashboard/manageOrders'
                                 className={`font-bold ${pathname.includes('/dashboard/manageOrders') && 'bg-[#fdb91c]'}`}
                             >
-                                Manage orders<span className={`font-bold text-white`}><FaRunning></FaRunning></span>
+                                <SiManageiq></SiManageiq>Manage orders<span className={`font-bold text-[#fce2a9]`}><FaRunning></FaRunning></span>
                             </Link>
                         </li>
                     }
@@ -59,7 +64,7 @@ const Dashboard = () => {
                             <Link to='/dashboard/addProduct'
                                 className={`font-bold ${pathname.includes('/dashboard/addProduct') && 'bg-[#fdb91c]'}`}
                             >
-                                Add Product<span className={`font-bold text-white`}><FaRunning></FaRunning></span>
+                                <AiOutlineAppstoreAdd></AiOutlineAppstoreAdd>Add Product<span className={`font-bold text-[#fce2a9]`}><FaRunning></FaRunning></span>
                             </Link>
                         </li>
                     }
@@ -68,7 +73,7 @@ const Dashboard = () => {
                             <Link to='/dashboard/makeAdmin'
                                 className={`font-bold ${pathname.includes('/dashboard/makeAdmin') && 'bg-[#fdb91c]'}`}
                             >
-                                Make Admin<span className={`font-bold text-white`}><FaRunning></FaRunning></span>
+                                <GrUserAdmin></GrUserAdmin>Make Admin<span className={`font-bold text-[#fce2a9]`}><FaRunning></FaRunning></span>
                             </Link>
                         </li>
                     }
@@ -77,7 +82,7 @@ const Dashboard = () => {
                             <Link to='/dashboard/manageItems'
                                 className={`font-bold ${pathname.includes('/dashboard/manageItems') && 'bg-[#fdb91c]'}`}
                             >
-                                Manage Items<span className={`font-bold text-white`}><FaRunning></FaRunning></span>
+                                <SiGoogletagmanager></SiGoogletagmanager>Manage Items<span className={`font-bold text-[#fce2a9]`}><FaRunning></FaRunning></span>
                             </Link>
                         </li>
                     }

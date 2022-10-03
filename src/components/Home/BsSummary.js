@@ -15,7 +15,7 @@ const BsSummary = () => {
                 <div>
                     <div className="summery-inside-banner">
                         <div className="grid grid-cols-1 py-10 gap-5 md:grid-cols-2 lg:grid-cols-4">
-                            <div className="lg:mx-10 rounded-2xl p-4 bg-white text-gray-500 hover:text-primary flex flex-col justify-center">
+                            <div data-aos="fade-down-right" data-aos-duration="2000" className="lg:mx-10 rounded-2xl p-4 bg-white text-gray-500 hover:text-primary flex flex-col justify-center">
                                 <div className="text-6xl py-5 mb-2 px-[1.45rem] cursor-text mx-auto transition-all duration-300">
                                     
                                 <BsFlagFill className='text-8xl mx-auto' />
@@ -39,12 +39,12 @@ const BsSummary = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="lg:mx-10 rounded-2xl p-4 bg-white text-gray-500 hover:text-primary  flex flex-col justify-center">
+                            <div data-aos="fade-down-right" data-aos-duration="2000" className="lg:mx-10 rounded-2xl p-4 bg-white text-gray-500 hover:text-primary  flex flex-col justify-center">
                                 <div className="text-6xl py-5 mb-2 px-[1.45rem] cursor-text mx-auto transition-all duration-300">
                                     
                                     <GiDeliveryDrone className='text-8xl mx-auto' />
                                 </div>
-                                <div data-aos="fade-down-right" data-aos-duration="2000" className="text-center">
+                                <div className="text-center">
                                     <CountUp start={0} end={500} duration={2}>
                                         {({ countUpRef, start }) => (
                                             <VisibilitySensor onChange={start} delayedCall>
@@ -63,12 +63,12 @@ const BsSummary = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="lg:mx-10 rounded-2xl p-4 bg-white text-gray-500 hover:text-primary  flex flex-col justify-center">
+                            <div data-aos="zoom-in-up" data-aos-duration="2000" className="lg:mx-10 rounded-2xl p-4 bg-white text-gray-500 hover:text-primary  flex flex-col justify-center">
                                 <div className="text-6xl py-5 mb-2 px-[1.45rem] cursor-text mx-auto transition-all duration-300">
                                     
                                     <FaUsers className='text-8xl mx-auto' />
                                 </div>
-                                <div data-aos="fade-down-left" data-aos-duration="2000" className="text-center">
+                                <div className="text-center">
                                     <CountUp start={0} end={70} duration={2}>
                                         {({ countUpRef, start }) => (
                                             <VisibilitySensor onChange={start} delayedCall>
@@ -87,12 +87,12 @@ const BsSummary = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="lg:mx-10 rounded-2xl p-4 bg-white text-gray-500 hover:text-primary   flex flex-col justify-center">
+                            <div data-aos="zoom-in-up" data-aos-duration="2000" className="lg:mx-10 rounded-2xl p-4 bg-white text-gray-500 hover:text-primary   flex flex-col justify-center">
                                 <div className="text-6xl py-5 mb-2 px-[1.45rem] cursor-text mx-auto transition-all duration-300">
                                     
                                     <AiFillLike className='text-8xl mx-auto' />
                                 </div>
-                                <div data-aos="fade-down-left" data-aos-duration="2000" className="text-center">
+                                <div className="text-center">
                                     <CountUp start={0} end={10} duration={2}>
                                         {({ countUpRef, start }) => (
                                             <VisibilitySensor onChange={start} delayedCall>

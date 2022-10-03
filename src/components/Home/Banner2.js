@@ -22,7 +22,7 @@ const Banner2 = () => {
                         <p className='text-white ml-8'>Price: $45</p>
                     </div>
                 </div>
-                <div data-aos="fade-down-left" data-aos-duration="2000">
+                <div data-aos="zoom-in-up" data-aos-duration="2000">
                     <div>
                         <img src={parts6t} className='w-48 mx-auto' alt="" />
                     </div>

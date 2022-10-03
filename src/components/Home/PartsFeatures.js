@@ -20,7 +20,7 @@ const PartsFeatures = () => {
                         with expertise that allows us to offer a full range of plastics based automotive solutions.
                     </p>
                 </div>
-                <div data-aos="fade-down-left" data-aos-duration="2000" className="flex-1 flex items-center gap-10 mx-auto">
+                <div data-aos="zoom-in-up" data-aos-duration="2000" className="flex-1 flex items-center gap-10 mx-auto">
                     <div
                         onClick={() => {
                             swal(

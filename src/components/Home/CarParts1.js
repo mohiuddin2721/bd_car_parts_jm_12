@@ -7,10 +7,11 @@ const CarParts1 = () => {
     return (
         <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-0 mx-4'>
             <div
+                className="carPart1-card card shadow-xl"
                 data-aos="zoom-in-up"
                 data-aos-duration="2000"
                 style={{ background: `url(${car1})`, height: '200px' }}
-                className="carPart1-card card shadow-xl">
+            >
                 <div className="card-body">
                     <h2 className="card-title font-bold text-white">LAMPS & LIGHTS</h2>
                     <p className="text-white">MEGA SALE</p>

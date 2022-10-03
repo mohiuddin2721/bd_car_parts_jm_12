@@ -38,7 +38,7 @@ const Process = () => {
                     <div className="rotate-90 lg:rotate-0 flex-1 flex items-center justify-center">
                         <FaChevronRight className='text-3xl' />
                     </div>
-                    <div data-aos="fade-down-left" data-aos-duration="2000" className="w-2/3 mx-auto lg:w-1/3 text-center px-6">
+                    <div data-aos="zoom-in-up" data-aos-duration="2000" className="w-2/3 mx-auto lg:w-1/3 text-center px-6">
                         <div className="hover:scale-110 transition-all duration-300 bg-gray-300 rounded-lg flex items-center justify-center border border-gray-200">
                             <div className="w-1/3 bg-transparent h-20 text-2xl flex items-center justify-center icon-step">
                                 <GiReceiveMoney />
@@ -54,7 +54,7 @@ const Process = () => {
                     <div className="rotate-90 lg:rotate-0 flex-1 flex items-center justify-center">
                         <FaChevronRight className='text-3xl' />
                     </div>
-                    <div data-aos="fade-down-left" data-aos-duration="2000" className="w-2/3 mx-auto lg:w-1/3 text-center px-6">
+                    <div data-aos="zoom-in-up" data-aos-duration="2000" className="w-2/3 mx-auto lg:w-1/3 text-center px-6">
                         <div className="hover:scale-110 transition-all duration-300 bg-gray-300 rounded-lg flex items-center justify-center border border-gray-200">
                             <div className="w-1/3 bg-transparent h-20 text-2xl flex items-center justify-center icon-step">
                                 <FaCheckCircle />

@@ -4,7 +4,7 @@ import './Banner1.css';
 
 const Banner1 = () => {
     return (
-        <section data-aos="zoom-in-left" data-aos-duration="2000" style={{backgroundImage: "url(https://i.ibb.co/CH4vPkt/bgCar3.webp)"}} className="banner-container bg-banner h-screen lg:h-[90vh] bg-fixed bg-no-repeat bg-cover mb-4 text-white">
+        <section data-aos="zoom-in-up" data-aos-duration="2000" style={{backgroundImage: "url(https://i.ibb.co/CH4vPkt/bgCar3.webp)"}} className="banner-container bg-banner h-screen lg:h-[90vh] bg-fixed bg-no-repeat bg-cover mb-4 text-white">
             <div className="banner-content">
                 <h2 className="text-left text-3xl lg:text-5xl uppercase font-bold text-white">
                     <span>BD CAR PARTS</span>

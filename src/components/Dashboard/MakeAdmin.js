@@ -9,14 +9,15 @@ const MakeAdmin = () => {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
-    }).then(res => res.json()));
+    })
+    .then(res => res.json()));
 
     if (isLoading) {
         return <Loading></Loading>
     }
     return (
         <div>
-            <h1>All Users:-{users?.length}</h1>
+            <h1 className='section-title m-2 font-semibold'>Total Users:-{users?.length}</h1>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
