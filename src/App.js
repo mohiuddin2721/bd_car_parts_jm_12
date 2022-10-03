@@ -26,9 +26,16 @@ import MessengerCustomerChat from 'react-messenger-customer-chat/lib/MessengerCu
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from './firebase.init';
 import Loading from './components/Shared/Loading';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
   const [user, loading] = useAuthState(auth);
+
+  useEffect(()=> {
+    AOS.init();
+  },[])
 
   if(loading){
     return <Loading></Loading>

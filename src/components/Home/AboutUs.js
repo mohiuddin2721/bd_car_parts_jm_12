@@ -4,7 +4,7 @@ import { Circle, LayerGroup, MapContainer, Marker, TileLayer, Tooltip } from 're
 const AboutUs = () => {
     return (
         <div id='aboutUs' className="flex items-center flex-col sm:flex-row my-10">
-            <div className="w-4/5 text-center sm:w-1/2 mx-auto px-2">
+            <div data-aos="fade-down-right" data-aos-duration="2000" className="w-4/5 text-center sm:w-1/2 mx-auto px-2">
                 <h1 className="section-title text-3xl font-semibold">Our Company</h1>
                 <p className="my-3">We Are a established company in this area for last 21 years. We have currently a lot of customers and many of them are repeat customers. Below shown our company's roadmap through year.</p>
                 <ul className="steps w-full">
@@ -23,7 +23,7 @@ const AboutUs = () => {
                 </div>
             </div>
             {/* center={[23.75005494868502, 90.37491877181348] */}
-            <div className="w-full border-4 flex justify-center items-center sm:w-1/2 mx-2">
+            <div data-aos="fade-down-left" data-aos-duration="2000" className="w-full border-4 flex justify-center items-center sm:w-1/2 mx-2">
                 <MapContainer center={[23.82321, 90.41912]} zoom={15} style={{ height: '300px', width: '100%' }}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

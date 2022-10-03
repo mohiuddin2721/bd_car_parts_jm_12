@@ -5,11 +5,14 @@ import parts9 from '../../images/parts9.webp';
 import parts6t from '../../images/parts6t.webp';
 
 const Banner2 = () => {
+
     return (
-        <div style={{ backgroundImage: `url(${bgCar1})` }} className='min-h-max bg-fixed bg-auto'>
+        <div
+            style={{ backgroundImage: `url(${bgCar1})` }}
+            className='min-h-max bg-fixed bg-auto'>
             <h2 className='section-title text-secondary text-4xl my-4 font-bold ml-8'>BEST SELL</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
-                <div>
+                <div data-aos="fade-down-right" data-aos-duration="2000">
                     <div>
                         <img src={parts9} className='w-48 mx-auto' alt="" />
                     </div>
@@ -19,7 +22,7 @@ const Banner2 = () => {
                         <p className='text-white ml-8'>Price: $45</p>
                     </div>
                 </div>
-                <div>
+                <div data-aos="fade-down-left" data-aos-duration="2000">
                     <div>
                         <img src={parts6t} className='w-48 mx-auto' alt="" />
                     </div>

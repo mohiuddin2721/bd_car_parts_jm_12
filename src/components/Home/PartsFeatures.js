@@ -8,7 +8,7 @@ const PartsFeatures = () => {
         <div className="py-20">
             <h1 className='section-title text-4xl font-bold ml-16'>Our Product Feature</h1>
             <div className="flex flex-col lg:flex-row justify-center items-center max-w-7xl px-8 lg:mx-auto gap-20">
-                <div className="flex-1">
+                <div data-aos="fade-down-right" data-aos-duration="2000" className="flex-1">
                     <h2 className="text-xl lg:text-3xl font-bold uppercase my-6">
                         We Make Using Car Part Comfortable
                     </h2>
@@ -20,7 +20,7 @@ const PartsFeatures = () => {
                         with expertise that allows us to offer a full range of plastics based automotive solutions.
                     </p>
                 </div>
-                <div className="flex-1 flex items-center gap-10 mx-auto">
+                <div data-aos="fade-down-left" data-aos-duration="2000" className="flex-1 flex items-center gap-10 mx-auto">
                     <div
                         onClick={() => {
                             swal(

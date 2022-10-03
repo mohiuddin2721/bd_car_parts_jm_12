@@ -12,7 +12,7 @@ const Review = ({ review }) => {
     }
 
     return (
-        <div className="review-card card w-xs-max bg-base-100 shadow-md duration-300 hover:shadow-2xl">
+        <div data-aos="zoom-in-up" data-aos-duration="2000" className="review-card card w-xs-max bg-base-100 shadow-md duration-300 hover:shadow-2xl">
             <div className="avatar">
                 <div className="review-img-div w-24 rounded-xl mx-auto mt-8 mb-0 ">
                     <img src={image} alt="Shoes" className="rounded-xl" />

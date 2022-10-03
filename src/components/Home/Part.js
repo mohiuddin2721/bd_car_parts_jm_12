@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Part = ({part}) => {
     const {_id, name, image, description, orderQuantity, availableQuantity, price} = part;
     return (
-        <div className="part-card card lg:card-side bg-base-100 mt-8 shadow-md duration-300 hover:shadow-2xl">
+        <div data-aos="zoom-in-up" data-aos-duration="2000" className="part-card card lg:card-side bg-base-100 mt-8 shadow-md duration-300 hover:shadow-2xl">
             <figure><img src={image} className="w-48" alt="" /></figure>
             <div className="card-body duration-300">
                 <h2 className="card-title">{name}</h2>

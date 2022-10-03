@@ -12,6 +12,7 @@ const Parts = () => {
             setParts(data);
         })
     },[])
+    
     return (
         <div className='mb-16 mx-8'>
             <h1 className='section-title'><span className='text-4xl font-bold'>WHAT WE </span> <span className='text-4xl font-thin'>OFFER</span></h1>
