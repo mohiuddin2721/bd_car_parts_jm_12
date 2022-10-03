@@ -14,7 +14,7 @@ const MyOrders = () => {
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
 
-    const { data: myOrders, isLoading, refetch } = useQuery('users', () => fetch(`https://cryptic-tor-43534.herokuapp.com/orders?email=${user.email}`, {
+    const { data: myOrders, isLoading, refetch } = useQuery('orders', () => fetch(`https://cryptic-tor-43534.herokuapp.com/orders?email=${user.email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
