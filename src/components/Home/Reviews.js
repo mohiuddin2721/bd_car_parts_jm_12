@@ -1,18 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
+import Loading from '../Shared/Loading';
 import Review from './Review';
 
 const Reviews = () => {
-    const [reviews, setReviews] = useState([]);
+    const { data: reviews, isLoading } = useQuery('reviews', () =>
+        fetch('https://cryptic-tor-43534.herokuapp.com/reviews', {
+            method: 'GET',
+        })
+            .then(res => res.json()));
 
-    useEffect(() => {
-        fetch('https://cryptic-tor-43534.herokuapp.com/reviews')
-            .then(res => res.json())
-            .then(data => {
-                // console.log(data);
-                setReviews(data);
-            })
-    }, [])
+    if (isLoading) {
+        return <Loading></Loading>
+    }
+    
     return (
         <div className='mt-12'>
             <div>
