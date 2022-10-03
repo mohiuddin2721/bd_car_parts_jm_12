@@ -13,7 +13,7 @@ const DeleteConfirmModal = ({ deletingItem, refetch, setDeletingItem }) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 if (data.deletedCount) {
                     toast.success(`Items: ${name} is deleted`);
                     setDeletingItem(null);

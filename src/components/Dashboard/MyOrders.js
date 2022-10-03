@@ -6,9 +6,11 @@ import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 import OrdersRow from './OrdersRow';
+import { useState } from 'react';
+import DeleteUserOrderModal from './DeleteUserOrderModal';
 
 const MyOrders = () => {
-    // const [myOrders, setMyOrders] = useState([]);
+    const [deletingOrderItem, setDeletingOrderItem] = useState(null);
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
 
@@ -51,11 +53,12 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            myOrders?.map((mo, index) => <OrdersRow 
-                            key={mo._id}
-                            index={index}
-                            mo={mo}
-                            refetch={refetch}
+                            myOrders?.map((mo, index) => <OrdersRow
+                                key={mo._id}
+                                index={index}
+                                mo={mo}
+                                refetch={refetch}
+                                setDeletingOrderItem={setDeletingOrderItem}
                             ></OrdersRow>
                             )
                         }
@@ -63,6 +66,13 @@ const MyOrders = () => {
                     </tbody>
                 </table>
             </div>
+            {
+                deletingOrderItem && <DeleteUserOrderModal
+                    deletingOrderItem={deletingOrderItem}
+                    refetch={refetch}
+                    setDeletingOrderItem={setDeletingOrderItem}
+                ></DeleteUserOrderModal>
+            }
         </div>
     );
 };
