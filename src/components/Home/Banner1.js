@@ -15,7 +15,7 @@ const Banner1 = () => {
                     offer products and services to multiple segments in parts,
                     completion, and production.
                 </p>
-                <MainButton>About Us</MainButton>
+                <MainButton><a href="#aboutUs">About Us</a></MainButton>
             </div>
         </section>
     );
