@@ -30,7 +30,7 @@ const Dashboard = () => {
                             to='/dashboard'
                             className='font-bold focus:bg-[#fdb91c]'
                         >
-                            <MdBorderColor></MdBorderColor>My Orders<span className={`font-bold text-[#fce2a9]`}><FaRunning></FaRunning></span>
+                            <MdBorderColor></MdBorderColor>My Orders<span className={`font-bold text-[#fce2a9]`}>   <FaRunning></FaRunning></span>
                         </Link>
                     </li>
                     {

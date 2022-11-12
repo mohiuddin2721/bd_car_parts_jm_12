@@ -55,7 +55,6 @@ const MakeAdminRow = ({ user, index, refetch }) => {
             <td>{email}</td>
             <td>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs btn-success">Make Admin  <RiAdminLine className='text-white text-sm' /></button>}</td>
             <td>{role === 'admin' && <button onClick={makeUser} className="btn btn-xs btn-secondary">Make User  <RiAdminLine className='text-white text-sm' /></button>}</td>
-            <td><button className="btn btn-xs btn-accent"><AiFillDelete className='text-red-500 text-sm' /></button></td>
         </tr>
     );
 };

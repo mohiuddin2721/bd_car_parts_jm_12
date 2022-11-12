@@ -26,7 +26,6 @@ const MakeAdmin = () => {
                             <th>Users</th>
                             <th>Admin</th>
                             <th>Admin to user</th>
-                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>

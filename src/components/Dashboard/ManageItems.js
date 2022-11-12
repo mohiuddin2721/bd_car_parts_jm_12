@@ -19,9 +19,9 @@ const ManageItems = () => {
 
     return (
         <div>
-            <h1>Manage your items..................{parts?.length}</h1>
+            <h1 className='section-title m-2 mt-4 font-semibold'>Total items: {parts?.length}</h1>
             <div className="overflow-x-auto">
-                <table className="table w-full">
+                <table className="table w-3/4 mx-auto">
                     <thead>
                         <tr>
                             <th></th>
