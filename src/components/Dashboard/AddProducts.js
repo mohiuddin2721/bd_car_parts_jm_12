@@ -20,7 +20,7 @@ const AddProducts = () => {
         })
             .then(res => res.json())
             .then(result => {
-                console.log('imgBBB', result);
+                // console.log('imgBBB', result);
                 if (result.success) {
                     const img = result.data.url;
                     const product = {
@@ -42,7 +42,7 @@ const AddProducts = () => {
                     })
                         .then(res => res.json())
                         .then(posted => {
-                            console.log('product', posted);
+                            // console.log('product', posted);
                             toast.success('Product added successfully!!!')
                             event.target.reset();
                         })

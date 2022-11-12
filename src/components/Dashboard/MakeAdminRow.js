@@ -29,7 +29,7 @@ const MakeAdminRow = ({ user, index, refetch }) => {
     }
 
     const makeUser = () => {
-        fetch(`http://localhost:5000/user/adminToUser/${email}`, {
+        fetch(`https://bd-car-parts-server-jm-12-production.up.railway.app/user/adminToUser/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

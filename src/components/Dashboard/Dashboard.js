@@ -55,7 +55,7 @@ const Dashboard = () => {
                             <Link to='/dashboard/manageOrders'
                                 className={`font-bold ${pathname.includes('/dashboard/manageOrders') && 'bg-[#fdb91c]'}`}
                             >
-                                <SiManageiq></SiManageiq>Manage orders<span className={`font-bold text-[#fce2a9]`}><FaRunning></FaRunning></span>
+                                <SiManageiq></SiManageiq>Manage all orders<span className={`font-bold text-[#fce2a9]`}><FaRunning></FaRunning></span>
                             </Link>
                         </li>
                     }
@@ -73,7 +73,7 @@ const Dashboard = () => {
                             <Link to='/dashboard/makeAdmin'
                                 className={`font-bold ${pathname.includes('/dashboard/makeAdmin') && 'bg-[#fdb91c]'}`}
                             >
-                                <GrUserAdmin></GrUserAdmin>Make Admin<span className={`font-bold text-[#fce2a9]`}><FaRunning></FaRunning></span>
+                                <GrUserAdmin></GrUserAdmin>Manage User<span className={`font-bold text-[#fce2a9]`}><FaRunning></FaRunning></span>
                             </Link>
                         </li>
                     }
@@ -82,7 +82,7 @@ const Dashboard = () => {
                             <Link to='/dashboard/manageItems'
                                 className={`font-bold ${pathname.includes('/dashboard/manageItems') && 'bg-[#fdb91c]'}`}
                             >
-                                <SiGoogletagmanager></SiGoogletagmanager>Manage Items<span className={`font-bold text-[#fce2a9]`}><FaRunning></FaRunning></span>
+                                <SiGoogletagmanager></SiGoogletagmanager>Manage Products<span className={`font-bold text-[#fce2a9]`}><FaRunning></FaRunning></span>
                             </Link>
                         </li>
                     }

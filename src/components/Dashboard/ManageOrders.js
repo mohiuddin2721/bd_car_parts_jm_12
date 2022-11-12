@@ -1,6 +1,25 @@
 import React from 'react';
+import { useState } from 'react';
+import { useQuery } from 'react-query';
+import Loading from '../Shared/Loading';
+import ManageAllOrderRows from './ManageAllOrderRows';
 
 const ManageOrders = () => {
+    const tableHeader = ['No.', 'User', 'Product', 'Quantity', 'Cost', 'Status', 'Action'];
+    const [childAction, setChildAction] = useState(false)
+
+    const { data: allOrders, isLoading, refetch } = useQuery('allOrders', () => fetch('http://localhost:5000/allOrders', {
+        method: 'GET',
+        headers: {
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        }
+    })
+        .then(res => res.json()));
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
+
     return (
         <div>
             <h1>Manage all orders............</h1>
@@ -8,35 +27,40 @@ const ManageOrders = () => {
                 <table className="table table-compact w-full">
                     <thead>
                         <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>company</th>
-                            <th>location</th>
-                            <th>Last Login</th>
-                            <th>Favorite Color</th>
+                            {
+                                tableHeader.map(th =>
+                                    <th>{th}</th>
+                                )
+                            }
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        {
+                            allOrders.map((allOrder, index) => <ManageAllOrderRows
+                                key={allOrder._id}
+                                index={index}
+                                allOrder={allOrder}
+                                refetch={refetch}
+                                setChildAction={setChildAction}
+                            ></ManageAllOrderRows>)
+                        }
+                        {/* <tr>
                             <th>1</th>
-                            <td>Cy Ganderton</td>
-                            <td>Quality Control Specialist</td>
-                            <td>Littel, Schaden and Vandervort</td>
-                            <td>Canada</td>
-                            <td>12/16/2020</td>
-                            <td>Blue</td>
-                        </tr>
+                            <td>email@gmail.com</td>
+                            <td>Products name</td>
+                            <td>25</td>
+                            <td>$$$$</td>
+                            <td>Pain</td>
+                            <td><button>delete</button></td>
+                        </tr> */}
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>company</th>
-                            <th>location</th>
-                            <th>Last Login</th>
-                            <th>Favorite Color</th>
+                            {
+                                tableHeader.map(th =>
+                                    <th>{th}</th>
+                                )
+                            }
                         </tr>
                     </tfoot>
                 </table>

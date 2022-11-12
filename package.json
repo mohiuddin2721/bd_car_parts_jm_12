@@ -27,6 +27,8 @@
     "react-toastify": "^9.0.1",
     "react-visibility-sensor": "^5.1.1",
     "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.6.8",
+    "sweetalert2-react-content": "^5.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
