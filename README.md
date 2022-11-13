@@ -2,6 +2,12 @@
 
 Live Projects [BD CAR PARTS](https://bd-car-parts.web.app/).
 
+To see the features of dashboard you must need to be an admin. Use the email and password. 
+##
+Email: admin@gmail.com 
+##
+Password: admin@123456 
+
 ## `Description of this projects`
    This is the best site for car tools. Anybody can purchase parts of car. You can easily handle this site. In dashboard page some functionality have for every users and others for admin. User can pay by international master card. User can easily delete their order. User can update his/her profile. All of data will be stored in mongodb database. This website is secured by JWT token.
 

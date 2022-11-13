@@ -8,6 +8,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
 import Loading from '../Shared/Loading';
 import { MdCancel } from 'react-icons/md';
+import { GiCommercialAirplane } from 'react-icons/gi';
 
 const ManageAllOrderRows = ({ allOrder, index, setChildAction, refetch }) => {
     // console.log(allOrder);
@@ -40,20 +41,7 @@ const ManageAllOrderRows = ({ allOrder, index, setChildAction, refetch }) => {
                 setChildAction(true)
                 try {
                     const deleteProduct = () => {
-                        // const { data } = await axios({
-                        //     method: 'DELETE',
-                        //     headers: {
-                        //         authorization: `Bearer ${localStorage.getItem('accessToken')}`,
-                        //         email: user?.email
-                        //     },
-                        //     data: {
-                        //         productId: productId,
-                        //         quantity: quantity,
-                        //     },
-                        //     url: `https://mysterious-shore-40767.herokuapp.com/admin-delete-order?id=${_id}`
-
-                        // })
-                        fetch(`http://localhost:5000/shippedOrders/${_id}`, {
+                        fetch(`https://bd-car-parts-server-jm-12-production.up.railway.app/shippedOrders/${_id}`, {
                             method: 'DELETE',
                             headers: {
                                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -72,7 +60,7 @@ const ManageAllOrderRows = ({ allOrder, index, setChildAction, refetch }) => {
                                     toast.error('Something went wrong', toastConfig)
                                 }
                             })
-                        
+
                     }
                     deleteProduct()
                 }
@@ -101,7 +89,7 @@ const ManageAllOrderRows = ({ allOrder, index, setChildAction, refetch }) => {
                 setChildAction(true)
                 try {
                     const shipOrder = async () => {
-                        fetch(`http://localhost:5000/allOrdersShipped/${_id}`, {
+                        fetch(`https://bd-car-parts-server-jm-12-production.up.railway.app/allOrdersShipped/${_id}`, {
                             method: 'PATCH',
                             headers: {
                                 'content-type': 'application/json',
@@ -140,22 +128,26 @@ const ManageAllOrderRows = ({ allOrder, index, setChildAction, refetch }) => {
     return (
         <tr>
             <th>{index + 1}</th>
-            <td>{name}</td>
-            <td>{items}</td>
-            <td>{quantity}</td>
-            <td>{price}</td>
-            {paid ? <td className='text-yellow-600'>Pending Shipping</td> : <td className='text-red-500'>Not Paid</td>}
-            {/* <td><button><AiFillHourglass className='App-logo ml-5 pointer-events-auto text-xl bg-[#fdb91c]' />Shipped</button></td> */}
+            <td className='font-semibold'>{name}</td>
+            <td className='font-semibold'>{items}</td>
+            <td className='font-semibold'>{quantity}</td>
+            <td className='font-semibold'>$ {price} {(price === 900 || price > 900) && <span className='text-xs font-bold text-blue-600 mb-8'>
+            <span className="indicator-item badge badge-secondary text-2xs">HIGH</span>
+            </span>} </td>
+            {status === 'Shipped' && <td className='text-green-600 font-bold'>{status}</td>}
+            {(status !== 'Shipped' && paid) && <td className='text-yellow-600 font-bold'>Pending Shipping</td>}
+            {(status !== 'Shipped' && !paid) && <td className='text-red-500 font-bold'>Not Paid</td>}
+
             {
                 status !== "Shipped" && <td>
                     <div className="dropdown dropdown-left">
                         <label tabIndex="0"><button><AiFillHourglass className='App-logo ml-5 pointer-events-auto text-xl bg-[#fdb91c]' /></button></label>
                         <ul tabIndex="0" className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                            {status === 'Not Paid' &&
-                                <li className="text-error"><span onClick={handleCancelOrder}><MdCancel></MdCancel> Cancel Order</span></li>
+                            {!paid &&
+                                <li className="text-error font-semibold"><span onClick={handleCancelOrder}><MdCancel></MdCancel> Cancel Order</span></li>
                             }
-                            {status === 'Paid' &&
-                                <li className="text-black"><span onClick={handleShipOrder}>Ship Order</span></li>
+                            {paid &&
+                                <li className="text-green-500 font-semibold"><span onClick={handleShipOrder}><GiCommercialAirplane />Ship Order</span></li>
                             }
                         </ul>
                     </div>

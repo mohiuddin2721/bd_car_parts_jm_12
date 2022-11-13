@@ -8,7 +8,7 @@ const ManageOrders = () => {
     const tableHeader = ['No.', 'User', 'Product', 'Quantity', 'Cost', 'Status', 'Action'];
     const [childAction, setChildAction] = useState(false)
 
-    const { data: allOrders, isLoading, refetch } = useQuery('allOrders', () => fetch('http://localhost:5000/allOrders', {
+    const { data: allOrders, isLoading, refetch } = useQuery('allOrders', () => fetch('https://bd-car-parts-server-jm-12-production.up.railway.app/allOrders', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -44,15 +44,6 @@ const ManageOrders = () => {
                                 setChildAction={setChildAction}
                             ></ManageAllOrderRows>)
                         }
-                        {/* <tr>
-                            <th>1</th>
-                            <td>email@gmail.com</td>
-                            <td>Products name</td>
-                            <td>25</td>
-                            <td>$$$$</td>
-                            <td>Pain</td>
-                            <td><button>delete</button></td>
-                        </tr> */}
                     </tbody>
                     <tfoot>
                         <tr>

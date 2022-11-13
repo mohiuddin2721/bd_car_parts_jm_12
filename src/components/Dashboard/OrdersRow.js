@@ -15,7 +15,7 @@ const OrdersRow = ({ mo, index, setDeletingOrderItem }) => {
                 {(mo?.price && mo?.paid) && <div>
                     <p><span className='text-success'>Paid {mo?.price} $</span> </p>
                     <p>Transaction Id: {mo?.transactionId}</p>
-                    {!mo?.shipped ? <p className='text-secondary'>Pending Shipping</p> : <p className='text-success'>Shipped</p>}
+                    {mo?.status === 'Shipped' ? <p className='text-success font-bold'>Shipped</p> : <p className='text-secondary'>Pending Shipping</p>}
                 </div>}
             </td>
             <td>{(mo?.price && !mo?.paid) && <label onClick={() => setDeletingOrderItem(mo)} htmlFor="delete-user-order-confirm-modal" className="btn btn-xs btn-error">Cancel Order</label>}</td>
