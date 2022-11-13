@@ -2,10 +2,8 @@
 
 Live Projects [BD CAR PARTS](https://bd-car-parts.web.app/).
 
-To see the features of dashboard you must need to be an admin. Use the email and password. 
-##
+To see the features of dashboard you must need to be an admin. Use the email and password.
 Email: admin@gmail.com 
-##
 Password: admin@123456 
 
 ## `Description of this projects`
