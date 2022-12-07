@@ -8,7 +8,7 @@ const MakeAdminRow = ({ user, index, refetch }) => {
     const { email, role } = user;
 
     const makeAdmin = () => {
-        fetch(`https://cryptic-tor-43534.herokuapp.com/user/admin/${email}`, {
+        fetch(`https://bd-car-parts-server-jm-12-production.up.railway.app/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

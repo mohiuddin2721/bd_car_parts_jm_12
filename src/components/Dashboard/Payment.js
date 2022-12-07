@@ -13,7 +13,7 @@ const stripePromise = loadStripe('pk_test_51L1Zo5LMB8CRBmaRDGWzRCHTkLcyXNhenNrYq
 const Payment = () => {
     const { id } = useParams();
 
-    const url = `https://cryptic-tor-43534.herokuapp.com/orders/${id}`;
+    const url = `https://bd-car-parts-server-jm-12-production.up.railway.app/orders/${id}`;
     const { data: order, isLoading } = useQuery('orders', () => fetch(url, {
         method: 'GET',
         headers: {

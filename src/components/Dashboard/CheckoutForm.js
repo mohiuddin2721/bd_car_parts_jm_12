@@ -13,7 +13,7 @@ const CheckoutForm = ({ order }) => {
     const { price, name, email, _id } = order;
 
     useEffect(() => {
-        fetch('https://cryptic-tor-43534.herokuapp.com/create-payment-intent', {
+        fetch('https://bd-car-parts-server-jm-12-production.up.railway.app/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -81,7 +81,7 @@ const CheckoutForm = ({ order }) => {
                 order: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://cryptic-tor-43534.herokuapp.com/orders/${_id}`, {
+            fetch(`https://bd-car-parts-server-jm-12-production.up.railway.app/orders/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

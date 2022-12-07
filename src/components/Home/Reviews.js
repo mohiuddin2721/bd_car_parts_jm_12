@@ -6,7 +6,7 @@ import Review from './Review';
 
 const Reviews = () => {
     const { data: reviews, isLoading } = useQuery('reviews', () =>
-        fetch('https://cryptic-tor-43534.herokuapp.com/reviews', {
+        fetch('https://bd-car-parts-server-jm-12-production.up.railway.app/reviews', {
             method: 'GET',
         })
             .then(res => res.json()));

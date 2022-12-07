@@ -10,7 +10,7 @@ const useToken = user => {
             email: email
         };
         if(email) {
-            fetch(`https://cryptic-tor-43534.herokuapp.com/user/${email}`, {
+            fetch(`https://bd-car-parts-server-jm-12-production.up.railway.app/user/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type' : 'application/json'

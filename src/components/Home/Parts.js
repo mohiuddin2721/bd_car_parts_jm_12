@@ -5,7 +5,7 @@ import Part from './Part';
 
 const Parts = () => {
     const { data: parts, isLoading } = useQuery('parts', () =>
-        fetch('https://cryptic-tor-43534.herokuapp.com/parts', {
+        fetch('https://bd-car-parts-server-jm-12-production.up.railway.app/parts', {
             method: 'GET',
         })
             .then(res => res.json()));
