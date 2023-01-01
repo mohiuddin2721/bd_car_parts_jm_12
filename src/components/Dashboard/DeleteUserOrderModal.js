@@ -5,7 +5,7 @@ const DeleteUserOrderModal = ({ deletingOrderItem, setDeletingOrderItem, refetch
     const { items, quantity, price, _id } = deletingOrderItem;
 
     const handleOrderDelete = (id) => {
-        fetch(`https://bd-car-parts-server-jm-12-production.up.railway.app/orders/${id}`, {
+        fetch(`https://bd-car-parts-server.onrender.com/orders/${id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

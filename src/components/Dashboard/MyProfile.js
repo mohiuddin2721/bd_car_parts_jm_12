@@ -10,7 +10,7 @@ const MyProfile = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://bd-car-parts-server-jm-12-production.up.railway.app/profile?email=${user.email}`, {
+            fetch(`https://bd-car-parts-server.onrender.com/profile?email=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -30,7 +30,7 @@ const MyProfile = () => {
             phone: data.phone,
             email: user.email
         }
-        const url = `https://bd-car-parts-server-jm-12-production.up.railway.app/profile/${user?.email}`
+        const url = `https://bd-car-parts-server.onrender.com/profile/${user?.email}`
         fetch(url, {
             method: 'PUT',
             headers: {

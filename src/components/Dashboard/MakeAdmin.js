@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import MakeAdminRow from './MakeAdminRow';
 
 const MakeAdmin = () => {
-    const { data: users, isLoading, refetch } = useQuery('user', () => fetch('https://bd-car-parts-server-jm-12-production.up.railway.app/user', {
+    const { data: users, isLoading, refetch } = useQuery('user', () => fetch('https://bd-car-parts-server.onrender.com/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

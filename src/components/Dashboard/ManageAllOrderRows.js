@@ -41,7 +41,7 @@ const ManageAllOrderRows = ({ allOrder, index, setChildAction, refetch }) => {
                 setChildAction(true)
                 try {
                     const deleteProduct = () => {
-                        fetch(`https://bd-car-parts-server-jm-12-production.up.railway.app/shippedOrders/${_id}`, {
+                        fetch(`https://bd-car-parts-server.onrender.com/shippedOrders/${_id}`, {
                             method: 'DELETE',
                             headers: {
                                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -89,7 +89,7 @@ const ManageAllOrderRows = ({ allOrder, index, setChildAction, refetch }) => {
                 setChildAction(true)
                 try {
                     const shipOrder = async () => {
-                        fetch(`https://bd-car-parts-server-jm-12-production.up.railway.app/allOrdersShipped/${_id}`, {
+                        fetch(`https://bd-car-parts-server.onrender.com/allOrdersShipped/${_id}`, {
                             method: 'PATCH',
                             headers: {
                                 'content-type': 'application/json',

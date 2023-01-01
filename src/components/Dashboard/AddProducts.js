@@ -32,7 +32,7 @@ const AddProducts = () => {
                         image: img
                     }
                     // now send review to database 
-                    fetch('https://bd-car-parts-server-jm-12-production.up.railway.app/parts', {
+                    fetch('https://bd-car-parts-server.onrender.com/parts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

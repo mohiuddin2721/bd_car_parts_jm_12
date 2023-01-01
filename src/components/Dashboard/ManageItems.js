@@ -7,7 +7,7 @@ import DeleteConfirmModal from './DeleteConfirmModal';
 const ManageItems = () => {
     const [deletingItem, setDeletingItem] = useState(null);
 
-    const { data: parts, isLoading, refetch } = useQuery('parts', () => fetch('https://bd-car-parts-server-jm-12-production.up.railway.app/parts', {
+    const { data: parts, isLoading, refetch } = useQuery('parts', () => fetch('https://bd-car-parts-server.onrender.com/parts', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

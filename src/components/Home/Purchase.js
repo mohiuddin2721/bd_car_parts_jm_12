@@ -13,7 +13,7 @@ const Purchase = () => {
     // console.log(user.email);
 
     useEffect(() => {
-        const url = `https://bd-car-parts-server-jm-12-production.up.railway.app/parts/${id}`;
+        const url = `https://bd-car-parts-server.onrender.com/parts/${id}`;
         fetch(url, {
             method: 'GET',
             headers: {
@@ -39,7 +39,7 @@ const Purchase = () => {
             address: data.address,
             quantity: data.quantity
         }
-        const url = 'https://bd-car-parts-server-jm-12-production.up.railway.app/orders';
+        const url = 'https://bd-car-parts-server.onrender.com/orders';
         fetch(url, {
             method: 'POST',
             headers: {
